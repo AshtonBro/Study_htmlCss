@@ -4,15 +4,22 @@ body {
     font-family: Arial;
 }
 
+section {
+
+}
+
 .card {
     display: flex;
     background-color: #fff;
-    height: 500px;
-    width: 1000px;
+    max-height: 500px;
+    max-width: 1000px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
+    right: 50%;
+    bottom: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -24,7 +31,8 @@ body {
 
 .discriptions {
     display: inline-block;
-    width: 407px;
+    max-width: 407px;
+    width: 100%;
     margin: 80px 62px 81px 99px;
     padding: 2px;
     font-size: 15px;
