@@ -1,15 +1,53 @@
-$color: #2403fc
-
-.header
-    &__title
+$color: #666666
+$backcolor: rgba(255, 255, 255, 0.1)
+$fz: 20px
+$liHeight: 16px
+    
+.footer
+    margin-top: 60px
+    background-color: #131313
+    padding: 59px 0
+    color: $color
+    &-policy-link
+        font-size: $fz - 8
+    p 
+        margin-bottom: 14px
+    a
         color: $color
-    &__text
-        color: darken($color, 10)
-    &__button
-        border: none
-        padding: 10px 20px
+        text-decoration: none
+    a:hover
         color: #fff
-        font-size: 20px
-        border-radius: 5px
-        background-color: $color
-        box-shadow: 1px 5px 20px lighten($color, 10)
+    small 
+        display: block
+        margin-top: 56px
+        line-height: $liHeight
+        font-size: $fz / 2
+        max-width: 80%
+    ul
+        padding: 0
+        list-style: none
+    ul li
+        line-height: $liHeight * 2
+    &-contacts, &-social-links
+        text-align: right
+    &-contacts_phone
+        font-weight: 400
+        font-size: $fz
+        color: #009adf
+    &-social-links 
+        li
+            display: inline-block
+        li a
+            display: inline-block
+            width: 42px
+            height: 42px
+            background-color: $backcolor
+            text-align: center
+            border-radius: 50%
+            line-height: $liHeight * 2 + 10
+            margin-left: 10px
+            -webkit-transition: all 0.2s
+            transition: all 0.2s
+        li a:hover
+            background-color: rgba($backcolor, 0.9)
+            color: #131313
