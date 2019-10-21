@@ -1,17 +1,17 @@
-.header {
-  font-size: 15px;
-  text-transform: uppercase;
-  line-height: 1.5;
+.header__title {
+  color: #2403fc;
 }
-.section-header {
-  font-size: 19px;
-  text-transform: uppercase;
-  line-height: 1.5;
-  background-color: #21aca0;
+.header__text {
+  color: #1d02ca;
+}
+.header__button {
+  border: none;
+  padding: 10px 20px;
   color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #2403fc;
+  box-shadow: 1px 5px 20px #5035fd;
 }
-span {
-  font-size: 19px;
-  text-transform: uppercase;
-  line-height: 1.5;
-}
+
+/*# sourceMappingURL=main.css.map */
