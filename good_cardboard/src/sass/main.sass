@@ -1,41 +1,48 @@
-.container
-    // деалем flex элемент
-    display: flex
-    border: 1px solid black
-    width: 90%
-    margin: auto
-    height: 330px
-    // выравнивание по горизонтали
-    justify-content: space-around
-    // выравнивание по вертикали
-    align-items: center
-    // многострочность элементов в flex-wrap
-    // flex-wrap: wrap
-    // заполение контента по вертикале
-    align-content: space-around
-    // указать направление
-    flex-direction: row
-.item
-    background-color: green
-    color: #fff
-     // базовая ширина элементов
-    flex-basis: 150px
-    text-align: center
-    padding: 10px
-    border: 1px solid red
-    &-3
-        align-self: flex-end
-.active
-    // порядок элементов (свойство order)
-    order: 1
-    // растяжение элементов flex-grow
-    // flex-grow: 2
-    // сужение элементов flex-shrink
-    flex-shrink: 1
-    // выравнивание отдельных элементов align-self
-    align-self: baseline
+*
+    box-sizing: border-box
 
-    background-color: purple
+body 
+    padding: 0
+    margin: 0
     color: #fff
-    &-1
-        align-self: flex-start
+.slider
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0
+
+.item
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 4)
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #aeaeae
+    flex-basis: 25%
+    transition: all 0.2s
+    &:hover
+        flex-basis: 50%
+span
+    font-size: 2rem
+    text-shadow: 0px 0px 10px #000
+    
+.item-1
+    background-image: url(http://www.wincore.ru/uploads/posts/2015-03/1427372648_29_result.jpg) 
+    background-size: cover
+.item-2
+    background-image: url(https://bipbap.ru/wp-content/uploads/2017/06/T1lbe_XoxlXXcGkps._111130.jpg) 
+    background-size: cover
+.item-3
+    background-image: url(https://zamanilka.ru/wp-content/uploads/2019/03/hd-wallpaper-for-mobile-1080x1920-5.jpg) 
+    background-size: cover
+.item-4
+    background-image: url(http://zabavnik.club/wp-content/uploads/images_for_phone_1_08162614.jpg) 
+    background-size: cover
+@media ( max-width: 640px )
+    .slider
+        height: 100vh
+        flex-flow: column
+    .item
+        width: 100%
+        &:hover
+            flex-grow: 30%
