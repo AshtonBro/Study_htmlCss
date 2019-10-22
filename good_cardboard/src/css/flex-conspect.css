@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  border: 1px solid black;
+  width: 90%;
+  margin: auto;
+  height: 330px;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-direction: row; }
+
+.item {
+  background-color: green;
+  color: #fff;
+  flex-basis: 150px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid red; }
+  .item-3 {
+    align-self: flex-end; }
+
+.active {
+  order: 1;
+  flex-shrink: 1;
+  align-self: baseline;
+  background-color: purple;
+  color: #fff; }
+  .active-1 {
+    align-self: flex-start; }
