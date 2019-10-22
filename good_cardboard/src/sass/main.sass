@@ -1,0 +1,28 @@
+.container
+    // деалем flex элемент
+    display: flex
+    border: 1px solid black
+    width: 90%
+    margin: auto
+    height: 330px
+    // выравнивание по горизонтали
+    justify-content: space-around
+    // выравнивание по вертикали
+    align-items: center
+    // многострочность элементов в flex-wrap
+    flex-wrap: wrap
+    // заполение контента по вертикале
+    align-content: space-around
+    // указать направление
+    flex-direction: row
+.item
+    background-color: green
+    color: #fff
+    padding: 10px
+    border: 1px solid red
+    &-3
+        align-self: flex-end
+.active
+    order: 1
+    background-color: purple
+    color: #fff
