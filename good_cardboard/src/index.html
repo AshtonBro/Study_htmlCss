@@ -1,76 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./css/normalize.css">
-   <link rel="stylesheet" href="./css/main.css">
-   <title>Landing on FlexBox</title>
-   
-</head>
-<body>
-   
-<div class="main">
-    <div class="main-overlay"></div>
-    <div class="header">
-        <div class="logo">
-            <img src="./img/header/logo.png" alt="logo">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#" class="menu-link">Home</a></li>
-                <li><a href="#" class="menu-link">Why MISOCIAL </a></li>
-                <li><a href="#" class="menu-link">Features</a></li>
-                <li><a href="#" class="menu-link">Articles</a></li>
-                <li><a href="#" class="menu-link">Pricing</a></li>
-                <li><a href="#" class="menu-link get-started">Get started</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="main-text">
-        <span>social marketing & analytics</span>
-        <h1>Pricing Table</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quaerat.</p>
-    </div>
-    <a href="#" class="main-arrow">
-        <div class="arrow-down">
-            <img src="./img/header/arrow.png" alt="arrow">
-        </div>
-    </a>
-</div>
+<html lang="ru">
 
-<div class="table">
-    <div class="table-header">
-        <span class="table-subtitle">MIsocial</span>
-        <h2>Select a Plan</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, pariatur?</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Верстка на Flex-box</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-img">
+            <img src="./img/header/header-img.png" alt="front page book">
+        </div>
+        <div class="header-text">
+            <div class="header-text__title">Истинная королева</div>
+            <div class="header-text__subtitle">Екатерина Арагонская</div>
+            <p>«Екатерина Арагонская» — это первый роман популярного автора и известного историка Элисон Уэйр, решившей
+                создать драматическую серию, в которой каждая книга будет посвящена одной из жен короля Генриха VIII.
+            </p>
+            <div class="header-text__price">399 р.</div>
+            <button class="button">Купить</button>
+            <button class="button-o">Узнать подробнее</button>
+        </div>
+    </header>
+
+    <div class="features">
+        <div class="features-title">
+            Доставка и оплата
+        </div>
+        <!-- /.features-title -->
+
+        <div class="features-section">
+            <div class="features-img">
+                <div class="features-img__img">
+                    <img src="./img/features/icon-1.png" alt="basket">
+                </div>
+                <!-- /.features-img__img -->
+                <div class="features-img__text">
+                    Бесплатная доставка <br>
+                    381 магазин в сети
+                </div>
+                <!-- /.features-img__text -->
+            </div>
+            <!-- /.features-img -->
+            <div class="features-img">
+                <div class="features-img__img">
+                    <img src="./img/features/icon-2.png" alt="card">
+                </div>
+                <!-- /.features-img__img -->
+                <div class="features-img__text">
+                    Оплата онлайн или <br>
+                    наличными при получении
+                </div>
+                <!-- /.features-img__text -->
+            </div>
+            <!-- /.features-img -->
+            <div class="features-img">
+                <div class="features-img__img">
+                    <img src="./img/features/icon-3.png" alt="truck">
+                </div>
+                <!-- /.features-img__img -->
+                <div class="features-img__text">
+                    Курьерская доставка: <br>
+                    от 2000 р. – бесплатно
+                </div>
+                <!-- /.features-img__text -->
+            </div>
+            <!-- /.features-img -->
+            <div class="features-img">
+                <div class="features-img__img">
+                    <img src="./img/features/icon-4.png" alt="mail">
+                </div>
+                <!-- /.features-img__img -->
+                <div class="features-img__text">
+                    Почтой России – <br>
+                    в любую точку страны
+                </div>
+                <!-- /.features-img__text -->
+            </div>
+            <!-- /.features-img -->
+        </div>
+        <!-- /.features -->
     </div>
-    <div class="price-tags">
-        <div class="price-tag">
-            <img src="./img/table/icon-1.png" alt="">
-            <span>personal</span>
-            <h4><sup>$</sup>0<sub>/month</sub></h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam quas error aliquam autem, soluta eos reiciendis, tempora tempore ex consequuntur sapiente obcaecati officiis nobis at itaque nisi saepe illo nostrum sequi repudiandae ab! Laboriosam ea dolorum sunt sequi autem eveniet?</p>
-            <button class="price-btn">select plan</button>
+
+    <div class="cliens">
+        <div class="cliens-title">
+            Кто уже купил эту книгу
         </div>
-        <div class="price-tag">
-            <img src="./img/table/icon-2.png" alt="">
-            <span>personal</span>
-            <h4><sup>$</sup>29<sub>/month</sub></h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aperiam deserunt quas vero minus. Reprehenderit est vero dicta, sed pariatur quae saepe corrupti, adipisci quaerat excepturi, accusamus commodi omnis incidunt molestias veniam modi rem quibusdam sunt nostrum voluptatum. Non, aliquam.</p>
-            <button class="price-btn">select plan</button>
-        </div>
-        <div class="price-tag">
-            <img src="./img/table/icon-3.png" alt="">
-            <span>personal</span>
-            <h4><sup>$</sup>49<sub>/month</sub></h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, tempore tempora quaerat assumenda corrupti voluptatem, eos saepe nobis sunt iusto itaque pariatur quas consequuntur earum modi adipisci dolor animi quam nemo fuga temporibus. Nobis reiciendis dolore consequatur consequuntur voluptate nisi?</p>
-            <button class="price-btn">select plan</button>
+
+        <div class="cliens-images">
+            <div class="clines-images__img">
+                <img src="./img/clients/img-1.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-2.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-3.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-4.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-5.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-6.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-7.png" alt="">
+            </div>
+            <div class="clines-images__img">
+                <img src="./img/clients/img-8.png" alt="">
+            </div>
         </div>
     </div>
-</div>
 
 </body>
+
 </html>

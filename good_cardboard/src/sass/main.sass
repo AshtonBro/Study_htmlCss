@@ -1,198 +1,103 @@
-$colorMain: #fff
-$colorHeader: #9fa4af
 *, *:before, *:after
     box-sizing: border-box
 
-html
-    font-size: 10px
-
 body 
-    font-family: Maven Pro, sans-serif
+    font-family: Tahoma, sans-serif
     padding: 0
     margin: 0
-
-img
-    width: 11rem
-
-.main
-    color: $colorMain
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    align-items: center
-    height: 100vh
-    min-height: 600px
-    background-image: url("../img/header/background.png")
-    background-size: cover
-    position: relative
-    &-overlay
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        opacity: .8
-        z-index: 0
-        background-color: $colorMain
-        background-image: linear-gradient(-60deg, #88d3ce 0%, #6e45e2 100%)
-    &-text
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        position: relative
-        z-index: 2
-        text-align: center
-        span
-            display: inline-block
-        span::after
-            content: ''
-            width: 20px
-            height: 1px
-            background-color: $colorMain
-            display: inline-block
-            vertical-align: middle
-            margin-left: 10px
-        span::before
-            content: ''
-            width: 20px
-            height: 1px
-            background-color: $colorMain
-            display: inline-block
-            vertical-align: middle
-            margin-right: 10px
-        h1
-            font-size: 80px
-            margin: .5rem
-
-    &-arrow
-        height: 15vh
-        display: flex
-        justify-content: center
-        align-items: center
-
-.arrow-down
-    text-align: center
-    border-radius: 50%
-    line-height: 55px
-    width: 50px
-    height: 50px
-    z-index: 2
-    background-color: $colorMain
-    box-shadow: 0 0 19px 2px rgba(204, 204, 223, 0.5);
-
+    margin-left: auto
+    margin-right: auto
 
 .header
     display: flex
-    height: 10vh
+    justify-content: center
     align-items: center
-    justify-content: space-between
-    width: 90%
-    position: relative
-    z-index: 2
+    padding-top: 77px
+    padding-bottom: 96px
+    margin-bottom: 15px
+    &-img
+        margin-right: 75px
+    &-text
+        width: 70%
+        max-width: 560px
+        &__title
+            font-size: 48px
+            font-weight: 700
+            margin-bottom: 15px
+        &__subtitle
+            font-size: 30px
+            font-weight: 400
+            margin-bottom: 35px
+        & p
+            font-size: 18px
+            font-weight: 400
+            margin-bottom: 47px
+        &__price
+            font-size: 48px
+            font-weight: 400
+            margin-bottom: 53px
 
-.menu
-    width: 70%
-    & ul
+.button
+    font-size: 24px
+    font-weight: 700
+    color: #fff
+    width: 175px
+    height: 67px
+    border-radius: 5px
+    background-color: #f05a22
+    border: none
+    margin-right: 40px
+    margin-bottom: 15px
+    &-o
+        color: #f05a22;
+        font-size: 24px;
+        font-weight: 700;
+        width: 287px
+        height: 67px
+        border-radius: 5px
+        border: 3px solid #f05a22
+        background-color: transparent
+
+.features
+    font-family: Open Sans
+    text-align: center
+    padding-top: 89px
+    padding-bottom: 99px
+    background-color: #f2f2f2;
+    &-title
+        font-size: 30px
+        font-weight: 700
+        margin-bottom: 91px
+    &-section
         display: flex
         justify-content: space-around
-        list-style: none
-    &-link
-        color: $colorMain
-        text-decoration: none
-
-.get-started
-    margin-left: 60px
-    border: 1px solid $colorMain
-    padding: 10px 20px
-    border-radius: 100px
-    text-transform: uppercase
-
-.table
-    background-color: #f9fafc
-    padding: 10rem
-    &-header
+        align-items: center
         text-align: center
-        margin-bottom: 5rem
-    &-header span
-        color: $colorHeader
-        text-transform: uppercase
-        font-size: 2rem
-    &-header span::after
-        content: ''
-        width: 24px
-        height: 1px
-        background-color: #6e45e2
-        display: inline-block
-        vertical-align: middle
-        margin-left: 10px
-    &-header span::before
-        content: ''
-        width: 25px
-        height: 1px
-        background-color: #6e45e2
-        display: inline-block
-        vertical-align: middle
-        margin-right: 10px
-    &-header h2
-        color: #4f4f6f;
-        font-size: 6rem
-        margin: 0
-    &-header p
-        font-size: 1.8rem
-        display: inline-block
-        width: 40rem
-        line-height: 1.4
-        color: $colorHeader
+        max-width: 1366px
+        margin-left: auto
+        margin-right: auto
+    &-img
+        &__img
+            min-height: 55px
+        &__text
+            font-size: 18px
+            font-weight: 400
+            line-height: 22px
 
-.price-tags
-    display: flex
-    justify-content: space-around
-    align-items: center
-
-.price-tag
-    background-color: $colorMain
-    border-radius: 2rem 
-    padding: 2rem
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    align-items: center
-    text-align: center
-    width: 35rem
-    height: 400px
-    transition: 0.2s
-    &:hover
-        cursor: pointer
-        box-shadow: 0 0 60px 10px rgba(204, 204, 223, 0.71)
-    & span
-        font-size: 1.4rem
-        text-transform: uppercase
-        margin-top: 3rem auto 1rem
-    & h4
-        font-weight: 500
-        margin: 1rem
-        color: #4f4f6f
-        font-size: 3.5rem
-    & h4 sub
-        font-size: 1.4rem
-    & h4 sup
-        vertical-align: super
-        font-size: 1.4rem
-        margin-right: .5rem
-    & p
-        color: #9fa4af
-
-.price-btn
-    background-color: $colorMain
-    border: 1px solid #9fa4af
-    color: #9fa4af
-    text-transform: uppercase
-    font-size: 1rem
-    font-weight: 300
-    padding: 1rem 4rem
-    border-radius: 100px
-    transition: 0.2s
-    &:hover
-        background-color: #6e45e2;
-
+.cliens
+    padding-top: 89px
+    padding-bottom: 111px
+    max-width: 1366px
+    margin-left: auto
+    margin-right: auto
+    &-title
+        font-size: 30px
+        font-weight: 700
+        margin-bottom: 69px
+    &-images
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__img
+            margin-right: 31px
+            margin-bottom: 40px
