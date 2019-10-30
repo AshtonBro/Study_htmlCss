@@ -2,93 +2,26 @@
   box-sizing: border-box; }
 
 body {
-  font-family: MullerMedium;
-  background-image: url("../img/backgrond.png"); }
-
-span {
-  font-weight: bold; }
-
-.container {
-  width: 1140px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.header {
-  display: block;
-  margin: auto;
-  text-align: center;
-  align-items: center; }
-  .header-text__title {
-    padding-top: 101px;
-    color: #6c1c02;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center; }
-  .header-text__subtitle {
-    margin-top: 40px;
-    padding-bottom: 54px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center; }
-  .header-block__wrap {
-    display: inline-block;
-    margin-bottom: 50px;
-    width: 32%;
-    align-items: center; }
-  .header-block__wrap::after {
-    content: '';
-    display: table;
-    clear: both; }
-  .header-images {
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 9px 21px rgba(0, 0, 0, 0.05);
-    background-color: #ffffff; }
-    .header-images img {
-      max-width: 150px;
-      max-height: 323px;
-      min-width: 150px;
-      min-height: 323px;
-      margin-bottom: 27px; }
-    .header-images__img {
-      margin-top: 44px;
-      width: 271px; }
-    .header-images__disc {
-      margin-bottom: 14px;
-      font-size: 16px;
-      font-weight: 400; }
-    .header-images__disc span {
-      font-weight: lighter;
-      color: #7f7f7f;
-      font-size: 16px; }
-    .header-images__price {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 30px;
-      margin-bottom: 36px; }
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif; }
 
 .button {
-  align-items: center;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 44px;
+  font-size: 14px;
+  background-color: #ff9d00;
+  border: none;
   color: #fff;
-  width: 523px;
-  height: 75px;
-  box-shadow: 0 9px 21px rgba(0, 0, 0, 0.15);
-  background-color: #e70000;
-  margin-bottom: 98px;
-  border: none; }
+  padding: 13px 22px;
+  border-radius: 5px; }
 
-@media (max-width: 1200px) and (min-width: 992px) {
-  .header-block__wrap {
-    width: 32%; } }
+img {
+  vertical-align: middle; }
 
-@media (max-width: 992px) and (min-width: 768px) {
-  .header-block__wrap {
-    width: 40%; } }
-
-@media (max-width: 768px) {
-  .header-block__wrap {
-    width: 51%; } }
+.header {
+  background-color: #fff; }
+  .header-contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .header-contacts__phone {
+      font-size: 22px;
+      margin-right: 13px; }
