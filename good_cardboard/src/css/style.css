@@ -36,6 +36,11 @@ body {
       margin-left: -150px;
       border: 1px solid #ffffff;
       border-radius: 50%; }
+    .main-img::after {
+      content: url(../img/main/icon-2.png);
+      position: absolute;
+      margin-top: 311px;
+      margin-left: -364px; }
   .main-text__title {
     margin-bottom: 22px;
     font-size: 41px;
