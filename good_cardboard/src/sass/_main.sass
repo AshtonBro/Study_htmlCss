@@ -1,0 +1,40 @@
+.main
+    position: relative
+    padding-top: 65px
+    padding-bottom: 60px
+    background: #373737 url(../img/main/header-background.jpg) center no-repeat
+    color: $text-color-light
+    z-index: 2
+
+    &::before /* Затемнение фонового изображение на главном экране */
+        content: ''
+        /* Делаем элемент блочным */
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.6)
+        z-index: 0
+
+    &-img /* Оформелние главное картинки */
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            z-index: -1
+            width: 380px;
+            height: 380px;
+            left: 50%
+            margin-left: -150px
+            border: 1px solid #ffffff
+            border-radius: 50%
+    &-text /* Заголовок */
+        &__title
+            margin-bottom: 22px
+            font-size: 41px
+            font-weight: 700
+        &__subtitle
+            font-size: 28px
+            font-weight: 300
