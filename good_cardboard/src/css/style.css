@@ -11,6 +11,7 @@ body {
   padding-top: 65px;
   padding-bottom: 60px;
   background: #373737 url(../img/main/header-background.jpg) center no-repeat;
+  background-size: cover;
   color: #fff;
   z-index: 2; }
   .main::before {
@@ -46,7 +47,35 @@ body {
     font-size: 41px;
     font-weight: 700; }
   .main-text__subtitle {
+    padding: 27px;
     font-size: 28px;
+    font-weight: 300; }
+  .main-text__form {
+    padding: 30px 27px;
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.form {
+  display: flex;
+  margin-bottom: 12px; }
+  .form-title {
+    margin-bottom: 20px;
+    padding-right: 87px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px; }
+    .form-title__uppertext {
+      font-weight: 700;
+      text-transform: uppercase; }
+  .form__input {
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    vertical-align: middle;
+    flex-basis: 50%; }
+  .form-small {
+    font-size: 14px;
     font-weight: 300; }
 
 body {
@@ -55,6 +84,9 @@ body {
 img {
   max-width: 100%; }
 
+input:focus, button:focus {
+  outline: none; }
+
 .button {
   font-size: 14px;
   background-color: #ff9d00;
@@ -62,6 +94,10 @@ img {
   color: #fff;
   padding: 13px 22px;
   border-radius: 5px; }
+  .button_big {
+    border-bottom: 19px;
+    vertical-align: middle;
+    width: 30%; }
   .button:hover {
     background-color: #ffb133;
     cursor: pointer; }
