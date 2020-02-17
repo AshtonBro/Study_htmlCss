@@ -46,15 +46,21 @@ const randomAge = (min, max) => {
 const check = () => {
     const rndBool = Boolean(Math.round(Math.random()));
     let rndNum = 0;
+    let div = document.createElement('div');
+    div.innerHTML = 'Do you have 18 ?';
+    div.className = 'textScreen';
+    main.appendChild(div);
     console.log('Do you have 18 ?');
     setTimeout(() => {
-        console.log(rndNum = randomAge(17, 19));
+        rndNum = randomAge(17, 19);
+        console.log(div.innerHTML = rndNum);
         checkTwo();
     }, 2000);
 
     const checkTwo = () => {
         if (rndNum === 17) {
             console.log('Access is denied');
+            div.innerHTML = 'Access is denied';
             clearTimeout(timeoutId);
         } else {
             setTimeout(checkTree, 2000);
@@ -62,16 +68,30 @@ const check = () => {
     };
 
     const checkTree = () => {
-        console.log('Do you have subscription ?');
+        console.log(div.innerHTML = 'Do you have subscription ?');
         setTimeout(() => {
             if (rndBool == true){
                 console.log('YES');
-                console.log('Welcome');
-                mainField.style.display = 'block';
+                div.innerHTML = 'YES';
+                setTimeout(() => {
+                    console.log('Welcome');
+                    div.style.color = 'blue';
+                    div.innerHTML = 'Welcome';
+                    setTimeout(() => {
+                        mainField.style.display = 'block';
+                        clearTimeout(timeoutId);
+                    }, 2000);
+                }, 2000);
             } 
             if (rndBool == false){
                 console.log('NO');
-                console.log('You are not subscribed! Access is denied');
+                div.innerHTML = 'NO';
+                setTimeout(() => {
+                    console.log('You are not subscribed! Access is denied');
+                    div.style.color = 'red';
+                    div.innerHTML = 'You are not subscribed! Access is denied';
+                    clearTimeout(timeoutId);
+                }, 2000);
             }
         }, 2000);
     };
