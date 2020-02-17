@@ -2,6 +2,15 @@
 	background: url(assets/bg.jpg) center 50% no-repeat;
 	height: 85rem;
 }
+
+.textScreen {
+	padding:20rem 30% 0 30%;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 40px;
+	color: black;
+}
+
 .main_field {
   width: 80%;
   height: 40rem;
@@ -66,3 +75,4 @@
 	opacity: 1;
 	box-shadow: none;
 }
+
