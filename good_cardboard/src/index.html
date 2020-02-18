@@ -57,10 +57,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-5">
-                  <div class="main-img">
-                    <img src="./img/main/boxes.png" alt="boxes">
-                  </div>
-                  <!-- /.main-img -->
+                    <div class="main-img">
+                        <img src="./img/main/boxes.png" alt="boxes">
+                    </div>
+                    <!-- /.main-img -->
                 </div>
                 <!-- /.col-5 -->
                 <div class="col-7">
@@ -131,10 +131,33 @@
         <!-- /.popup -->
     </div>
     <!-- /.overlay -->
+    <script src="/script/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/script/jquery.maskedinput.js"></script>
+    <script src="/script/jquery.maskedinput.min.js"></script>
+      <script>
+        window.jQuery || document.write('<script src="/script/jquery.slim.min.js"><\/script>')
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.header-contacts__button').on('click', function () {
+                $('.overlay').show();
+            });
+            $('.popup-close').on('click', function () {
+                $('.overlay').hide();
+            });
+        });
+    </script>
 
-    <script src="https://code"></script>
-    <script src="/script/script.js"></script>
+    
+    
+    <script>
+        jQuery(function($){
+            $(".popup-form__input").mask("(999) 999-9999");
+        });
+    </script>
+
 </body>
- 
+
 
 </html>
