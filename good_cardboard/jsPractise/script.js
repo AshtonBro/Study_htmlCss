@@ -50,16 +50,14 @@ const check = () => {
     div.innerHTML = 'Do you have 18 ?';
     div.className = 'textScreen';
     main.appendChild(div);
-    console.log('Do you have 18 ?');
     setTimeout(() => {
         rndNum = randomAge(17, 19);
-        console.log(div.innerHTML = rndNum);
+        div.innerHTML = rndNum;
         checkTwo();
     }, 2000);
 
     const checkTwo = () => {
         if (rndNum === 17) {
-            console.log('Access is denied');
             div.innerHTML = 'Access is denied';
             clearTimeout(timeoutId);
         } else {
@@ -68,13 +66,11 @@ const check = () => {
     };
 
     const checkTree = () => {
-        console.log(div.innerHTML = 'Do you have subscription ?');
+        div.innerHTML = 'Do you have subscription ?';
         setTimeout(() => {
             if (rndBool == true){
-                console.log('YES');
                 div.innerHTML = 'YES';
                 setTimeout(() => {
-                    console.log('Welcome');
                     div.style.color = 'blue';
                     div.innerHTML = 'Welcome';
                     setTimeout(() => {
@@ -84,10 +80,8 @@ const check = () => {
                 }, 2000);
             } 
             if (rndBool == false){
-                console.log('NO');
                 div.innerHTML = 'NO';
                 setTimeout(() => {
-                    console.log('You are not subscribed! Access is denied');
                     div.style.color = 'red';
                     div.innerHTML = 'You are not subscribed! Access is denied';
                     clearTimeout(timeoutId);
