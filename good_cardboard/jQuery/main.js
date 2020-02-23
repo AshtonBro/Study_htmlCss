@@ -27,13 +27,14 @@ $('p:odd').css('border', 'solid 3px gray'); // применить стиль к 
 
 //-------- Фильтры по содержимому(:has, :parent, :empty и т.д.)
 $('h2:has(span)').css('border', 'solid 3px gray');
-$('.box:parent').css('border', 'solid 3px gray'); // элементы являющиеся родителями 
+$('.box:parent').css('border', 'solid 3px red'); // элементы являющиеся родителями 
 //(если в эдементе что-то есть он уже являеться родителем, пустой элемент выделяться не будет)
 
 //-------- Фильтры по атрибутам ([name ~= value] и т.д.)
 $('a[href="https://www.google.com/" ]').css('border', 'solid 3px gray'); // выделям ссылку которая содержит Google
 //$('a[href!="https://www.google.com/" ]').css('border', 'solid 3px gray'); // с помощью оператора != можно выделить все ссылки не равные заданой
-
+$('a[href^="http"]').css('border', 'solid 3px green'); // выделяем те ссылки которые начинаються с http
+$('a[href$=".ru]').css('border', 'solid 3px yellow'); // знак $ означает что ссылка заканчивается на этот симфол
 
 
 

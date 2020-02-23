@@ -20,3 +20,14 @@ hr {
     color: green; /* Цвет линии для IE6-7 */
     height: 2px; /* Толщина линии */
 }
+
+.boxes {
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-weight: normal;
+    color: #FFF;
+    width: 50px;
+    background-color: orange;
+    
+}
