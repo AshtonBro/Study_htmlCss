@@ -10,7 +10,7 @@ $(document).ready(function(){
 //--------СЕЛЕКТОРЫ
 
 //--------Базовые селекторы (#id, tagName, .class)
-$('span').css('border', 'solid 3px red');
+//$('span').css('border', 'solid 3px red');
 //$('p').css('border', 'solid 2px green');
 
 //--------Селекторы взаимодействия (parent, child, + ~ и т.д.)
@@ -36,9 +36,46 @@ $('a[href="https://www.google.com/" ]').css('border', 'solid 3px gray'); // вы
 $('a[href^="http"]').css('border', 'solid 3px green'); // выделяем те ссылки которые начинаються с http
 $('a[href$=".ru]').css('border', 'solid 3px yellow'); // знак $ означает что ссылка заканчивается на этот симфол
 
+// Урок 2
 
+//---------События
 
+//--------- Клик мышью (click, dblclick)
+$('h2').click(function(){
+    console.log('Ты кликнул по заголовку');
+});
+$('h2').dblclick(function(){
+    $(this).toggleClass('blue');
+    console.log('Ты кликнул по заголовку double clickом');
+});
 
+// Полеты над элементом (mouseenter, mouseleave и т.д.)
+$('p').mouseenter(function(){
+    $(this).toggleClass('blue');
+    console.log('Ты навел на элемент <p>');
+});
+$('p').mouseleave(function(){
+    $(this).toggleClass('blue');
+    console.log('Ты убрал курсор с элемента <p>');
+});
+
+// Формы (focus, change и т.д.)
+$('input').focus(function(){
+    console.log('Поле в фокусе');
+});
+
+$('input').change(function(){
+    $('#userName').text(', ' + $(this).val());
+    console.log('Поле в фокусе');
+});
+
+// Клавиатура (keypress, keydown, keyup)
+$('input').keypress(function(){
+    console.log('Ты нажал кнопку в impute');
+});
+$('input').keyup(function(){
+    console.log('Ты отпустил нажатую кнопку в impute');
+});
 
 
 
