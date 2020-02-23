@@ -34,6 +34,7 @@ hr {
     font-weight: normal;
     justify-content: space-between;
     vertical-align: middle;
+    border-radius: 15px;
 }
 
 .blue {
