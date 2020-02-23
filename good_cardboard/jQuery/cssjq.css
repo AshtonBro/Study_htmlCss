@@ -1,0 +1,22 @@
+.main-wrap {
+    display: block;
+    position: absolute;
+    font-family: 'Roboto';
+    padding-top: 8rem;
+    padding-left: 35%;
+    width: 560px;
+}
+
+.link {
+    display: block;
+    margin-top: 15px;
+    background-color: lightgrey;
+    padding: 0.5rem;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: grey; /* Цвет линии */
+    color: green; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+}

@@ -4,7 +4,6 @@ const sass = require('gulp-sass');
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 
-
 // Запускаем сервер, предварительно скопилировав SASS
 gulp.task('serve', ['sass'], () => {
 
@@ -30,9 +29,7 @@ gulp.task('default', ['serve']);
 gulp.task('deploy', () => {
 
 	var conn = ftp.create( {
-		host:     '89.108.85.65',
-		user:     'ashto509',
-		password: 'wRaO91UPoc',
+		
 		log:      gutil.log
 	} );
 
