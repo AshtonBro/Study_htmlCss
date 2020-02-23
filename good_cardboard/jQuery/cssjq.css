@@ -40,3 +40,11 @@ hr {
 .blue {
     color: rgb(37, 137, 184);
 }
+
+.img-box {
+    display: block;
+    position: absolute;
+    margin: 15px;
+    max-width: 550px;
+    max-height: 550px;
+}

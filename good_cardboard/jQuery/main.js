@@ -40,7 +40,7 @@ $('a[href$=".ru]').css('border', 'solid 3px yellow'); // знак $ означа
 
 //---------События
 
-//--------- Клик мышью (click, dblclick)
+//---------Клик мышью (click, dblclick)
 $('h2').click(function(){
     console.log('Ты кликнул по заголовку');
 });
@@ -49,7 +49,7 @@ $('h2').dblclick(function(){
     console.log('Ты кликнул по заголовку double clickом');
 });
 
-// Полеты над элементом (mouseenter, mouseleave и т.д.)
+//---------Полеты над элементом (mouseenter, mouseleave и т.д.)
 $('p').mouseenter(function(){
     $(this).toggleClass('blue');
     console.log('Ты навел на элемент <p>');
@@ -59,7 +59,7 @@ $('p').mouseleave(function(){
     console.log('Ты убрал курсор с элемента <p>');
 });
 
-// Формы (focus, change и т.д.)
+//---------Формы (focus, change и т.д.)
 $('input').focus(function(){
     console.log('Поле в фокусе');
 });
@@ -69,13 +69,29 @@ $('input').change(function(){
     console.log('Поле в фокусе');
 });
 
-// Клавиатура (keypress, keydown, keyup)
+//---------Клавиатура (keypress, keydown, keyup)
 $('input').keypress(function(){
     console.log('Ты нажал кнопку в impute');
 });
 $('input').keyup(function(){
     console.log('Ты отпустил нажатую кнопку в impute');
 });
+
+//---------Урок 3
+
+//---------Базовые анимации
+$('.box:first').delay(1000).hide('1000').delay(1000).show(1000); // базавая анимация для первого элемента, спрятать элемент с задержкой в 1000 млс
+$('.box:eq(1)').animate({'width': '200px'}, 1000); // увеличить ширину с заданной задержкой
+$('.box:eq(2)').slideUp(1000).delay(1000).slideDown(1000);
+
+//---------Взаимодестйсвия с Атрибутами
+
+
+
+//---------Взаимодействия с классами
+
+//---------Клонирование, добавление, пермещение элементов
+
 
 
 
