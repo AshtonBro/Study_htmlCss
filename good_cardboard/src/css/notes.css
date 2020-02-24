@@ -1,1 +1,215 @@
-/* */
+/*
+В качестве медиа типов были определены следующие: aural, braille, hanheld, print,
+projectionm, screen, tty, tv. таким образом, браузер применял таблицу стилей только
+в случае, когда активизировался данный тип устройсва.
+
+Кроме того, было введено ключевое слово all, которое использовалось, чтобы указать,
+что таблица стилей применяется ко всем типам носителей.
+
+
+В HTML4 медиа-запрос записывался следующим образом:
+
+<link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css">
+<link rel="stylesheet" type="text/css" media="print" href="serif.css">
+
+Внутри таблицы стилей также можно было объявить, что блоки объявлений должны применяться
+к определенным типам носителей:
+
+@media screen {
+  * {font-family: sans-serif;}
+}
+
+Из всех характеристик чаще всего проверяется ширина устройства width. Медиа-запрос 
+является логическим выражением, которое возвращает истину или ложь.
+
+Медиа-запросы могут быть добавлены следующими способами:
+
+1) С помощью HTML:
+
+<link rel="stylesheet" media="screen and (color)" href="example.css">
+CSS
+
+2) С помощью правила @import внутри элемента <style> или внешней таблицы стилей:
+
+@import url(color.css) screen and (color);
+CSS
+
+3) Непосредственно в коде страницы:
+
+<style>
+@media (max-width: 600px) {
+  #sidebar {display: none;}
+}
+</style>
+HTML
+
+4) Внутри таблицы стилей style.css:
+
+@media (max-width: 600px) {
+  #sidebar {display: none;}
+}
+
+Для поддержки медиа-запросов в старых браузерах можно воспользоваться 
+JavaScript-библиотекой css3-mediaqueries.js, 
+доступную по адресу https://code.google.com/archive/p/css3-mediaqueries-js/.
+
+
+2.1. Оператор and
+Оператор and связывает друг с другом разные условия:
+
+@media screen and (max-width: 600px) {
+
+}
+CSS
+Стили этого запроса будут применяться только для экранных устройств с шириной области 
+просмотра не более 600px.
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+}
+CSS
+Стили этого запроса будут применяться для всех устройств при ширине области просмотра 
+от 600px до 800px включительно.
+
+Правило @media all and (max-width: 600px) {...} равнозначно правилу @media (max-width: 600px) {...}.
+
+2.2. Оператор запятая
+Оператор запятая работает по аналогии с логическим оператором or.
+
+@media screen, projection {
+
+}
+CSS
+В данном случае CSS-стили, заключенные в фигурные скобки, сработают только для экранных или 
+проекционных устройств.
+
+
+Метатег viewport
+Для управления разметкой в мобильных браузерах используется метатег viewport. Изначально 
+данный тег был представлен разработчиками Apple для браузера Safari на iOS. Мобильные браузеры 
+отображают страницы в виртуальном окне просмотра, которое обычно шире, чем экран устройства. 
+С помощью метатега viewport можно контролировать размер окна просмотра и масштаб.
+
+Страницы, адаптированные для просмотра на разных типах устройств, должны содержать в разделе <head> 
+метатег viewport.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+HTML
+Свойство width определяет виртуальную ширину окна просмотра, значение device-width — физическую 
+ширину устройства. Другими словами, width отражает значение document.documentElement.clientWidth,
+ а device-width — screen.width.
+
+
+
+  Smartphones (вертикальная и горизонтальная ориентация)  
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    твой css код
+    }
+    
+     Smartphones (горизонтальная)  
+    @media only screen and (min-width: 321px) {
+    твой css код
+    }
+    
+     Smartphones (вертикальная)  
+    @media only screen and (max-width: 320px) {
+    твой css код
+    }
+    
+     iPads (вертикальная и горизонтальная)  
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    твой css код
+    }
+    
+     iPads (горизонтальная)  
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    }
+    
+     iPads (вертикальная)  
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    твой css код
+    }
+    
+     iPad 3*********
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    твой css код
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    твой css код
+    }
+    
+     Настольные компьютеры и ноутбуки  
+    @media only screen  and (min-width: 1224px) {
+    твой css код
+    }
+    
+     Большие экраны  
+    @media only screen  and (min-width: 1824px) {
+    твой css код
+    }
+    
+     iPhone 4  
+    @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    твой css код
+    }
+    @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    твой css код
+    }
+    твой css код
+     iPhone 5  
+    @media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    @media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    
+     iPhone 6  
+    @media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    @media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    
+     iPhone 6+  
+    @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    @media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    
+     Samsung Galaxy S3  
+    @media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    @media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    твой css код
+    }
+    
+     Samsung Galaxy S4  
+    @media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    твой css код
+    }
+    @media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    твой css код
+    }
+    
+     Samsung Galaxy S5  
+    @media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    твой css код
+    }
+    @media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    твой css код
+    }
+
+
+
+
+
+
+
+*/
+
