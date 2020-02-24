@@ -241,7 +241,26 @@ img {
         margin-top: 19px; }
     .form__input {
       display: block;
-      margin-bottom: 13px;
+      margin-bottom: 15px;
       width: 100%; }
   .button_big {
-    width: 180px; } }
+    width: 180px; }
+  .overlay .popup {
+    top: 72px;
+    width: 275px; }
+    .overlay .popup-title {
+      font-size: 19px; }
+    .overlay .popup-form {
+      padding: 20px 25px 50px 25px;
+      height: 400px; }
+      .overlay .popup-form-header {
+        font-size: 22px; }
+        .overlay .popup-form-header span {
+          display: flex;
+          font-size: 17px; }
+      .overlay .popup-form__input {
+        width: 222px;
+        margin-top: 12px;
+        margin-bottom: 10px; }
+      .overlay .popup-form__btn {
+        width: 100%; } }
