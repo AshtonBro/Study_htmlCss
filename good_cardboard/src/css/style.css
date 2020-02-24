@@ -108,6 +108,11 @@ img {
 .header {
   padding: 15px 0;
   background-color: #fff; }
+  .header-logo {
+    background: url(../img/header/header-log.png) center no-repeat;
+    background-size: 100%;
+    width: 191px;
+    height: 61px; }
   .header-contacts {
     display: flex;
     justify-content: flex-end;
@@ -115,6 +120,8 @@ img {
     .header-contacts__phone {
       font-size: 22px;
       margin-right: 13px; }
+      .header-contacts__phones {
+        display: flex; }
       .header-contacts__phone:first-child {
         border-right: 1px solid #cfcfd0;
         padding-right: 13px; }
@@ -191,3 +198,21 @@ img {
         font-weight: 300;
         line-height: 30px;
         font-weight: center; }
+
+@media (max-width: 576px) {
+  .header-logo {
+    background: #ff9d00 url(../img/header/header-logo-mobile.png);
+    width: 35px;
+    height: 35px;
+    border-radius: 4px; }
+  .header-contacts__phone {
+    font-size: 14px;
+    margin-right: 0;
+    border: none; }
+    .header-contacts__phones {
+      flex-direction: column; }
+  .header-contacts__button {
+    display: inline-block;
+    padding: 9px; }
+  .hidden-mobile {
+    display: none; } }
