@@ -40,7 +40,7 @@ body {
     .main-img::after {
       content: url(../img/main/icon-2.png);
       position: absolute;
-      margin-top: 311px;
+      margin-top: 310px;
       margin-left: -364px; }
   .main-text__title {
     margin-bottom: 22px;
@@ -209,11 +209,12 @@ img {
     height: 35px;
     border-radius: 4px; }
   .header-contacts__phone {
-    font-size: 14px;
-    margin-right: 0;
-    border: none; }
+    font-size: 15px;
+    margin-right: 0; }
     .header-contacts__phones {
       flex-direction: column; }
+    .header-contacts__phone:first-child {
+      border: none; }
   .header-contacts__button {
     display: inline-block;
     padding: 9px; }
@@ -266,15 +267,44 @@ img {
         width: 100%; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  padding: 15px 0;
-  background-color: #fff;
-  -logo {
-    background: url(../img/header/header-log.png) center no-repeat;
-    background-size: 100%;
-    width: 113px;
-    height: 41px; }
-  -contacts__phone {
-    flex-direction: column;
-    font-size: 14px;
-    margin-right: 0;
-    border: none; } }
+  .header {
+    padding: 10px 0;
+    background-color: #fff; }
+    .header-logo {
+      background: url(../img/header/header-log.png) center no-repeat;
+      background-size: 100%;
+      width: 143px;
+      height: 71px; }
+    .header-contacts__phone {
+      font-size: 17px;
+      margin-right: 10px; }
+      .header-contacts__phones {
+        flex-direction: column; }
+      .header-contacts__phone:first-child {
+        border: none; }
+    .header-contacts__button {
+      display: inline-block;
+      padding: 13px; }
+  .main {
+    text-align: center;
+    padding-top: 50px; }
+    .main-text__title {
+      font-size: 22px;
+      color: #ff9d00; }
+    .main-text__subtitle {
+      font-size: 18px;
+      padding: 7px;
+      margin-bottom: 5px; }
+    .main-text__form {
+      background-color: transparent;
+      padding: 10px; }
+  .form {
+    display: flex;
+    margin-bottom: 12px; }
+    .form-title {
+      padding-right: 0; }
+  .button_big {
+    border-bottom: 17px;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto; } }
