@@ -264,3 +264,17 @@ img {
         margin-bottom: 10px; }
       .overlay .popup-form__btn {
         width: 100%; } }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  padding: 15px 0;
+  background-color: #fff;
+  -logo {
+    background: url(../img/header/header-log.png) center no-repeat;
+    background-size: 100%;
+    width: 113px;
+    height: 41px; }
+  -contacts__phone {
+    flex-direction: column;
+    font-size: 14px;
+    margin-right: 0;
+    border: none; } }
