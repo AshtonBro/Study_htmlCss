@@ -133,7 +133,7 @@
     .overlay
         .popup
             top: 100px
-            width: 560px
+            width: 540px
             &-title
                 font-size: 22px
             &-form
@@ -233,3 +233,41 @@
                     margin-right: 9px
                 &__btn
                     width: 100%
+
+@media (min-width: 992px) and (max-width: 1200px)
+    .header
+        &-contacts
+                &__phone
+                    &s
+                        flex-direction: row
+                    &:first-child
+                        border-right: 1px solid #cfcfd0
+                        padding-right: 13px
+    .main
+        &-img
+            &::before
+                width: 314px
+                height: 317px
+                left: 57%
+            &::after
+                margin-top: 262px
+                margin-left: -309px
+        &-text
+            &__title
+                font-size: 31px
+                padding-top: 15px
+                margin-bottom: 15px
+            &__subtitle
+                font-size: 23px
+                padding: 17px
+            &__form
+                padding: 22px 27px;
+    .form
+        &-title
+            font-size: 22px
+            padding-right: 77px
+        &-small
+            font-size: 19px
+    .button
+        &_big
+            width: 35%

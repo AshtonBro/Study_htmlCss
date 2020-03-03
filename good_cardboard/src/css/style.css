@@ -40,7 +40,7 @@ body {
     .main-img::after {
       content: url(../img/main/icon-2.png);
       position: absolute;
-      margin-top: 310px;
+      margin-top: 319px;
       margin-left: -364px; }
   .main-text__title {
     margin-bottom: 22px;
@@ -194,6 +194,8 @@ img {
         line-height: 22px;
         background-color: #ff9d00; }
       .overlay .popup-form__note {
+        display: flex;
+        margin-left: 20px;
         margin-top: 9px;
         font-size: 14px;
         font-weight: 300;
@@ -327,7 +329,7 @@ img {
     margin-left: auto; }
   .overlay .popup {
     top: 100px;
-    width: 560px; }
+    width: 540px; }
     .overlay .popup-title {
       font-size: 22px; }
     .overlay .popup-form {
@@ -422,3 +424,33 @@ img {
         margin-right: 9px; }
       .overlay .popup-form__btn {
         width: 100%; } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .header-contacts__phones {
+    flex-direction: row; }
+  .header-contacts__phone:first-child {
+    border-right: 1px solid #cfcfd0;
+    padding-right: 13px; }
+  .main-img::before {
+    width: 314px;
+    height: 317px;
+    left: 57%; }
+  .main-img::after {
+    margin-top: 262px;
+    margin-left: -309px; }
+  .main-text__title {
+    font-size: 31px;
+    padding-top: 15px;
+    margin-bottom: 15px; }
+  .main-text__subtitle {
+    font-size: 23px;
+    padding: 17px; }
+  .main-text__form {
+    padding: 22px 27px; }
+  .form-title {
+    font-size: 22px;
+    padding-right: 77px; }
+  .form-small {
+    font-size: 19px; }
+  .button_big {
+    width: 35%; } }
