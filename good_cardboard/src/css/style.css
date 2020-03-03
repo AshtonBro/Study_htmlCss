@@ -362,13 +362,13 @@ img {
       margin-right: auto;
       margin-left: auto; }
       .main-img::before {
-        width: 350px;
-        height: 350px;
-        left: 50%; }
+        width: 416px;
+        height: 404px;
+        left: 47%; }
       .main-img::after {
         content: url(../img/main/icon-2.png);
-        margin-top: 185px;
-        margin-left: -248px; }
+        margin-top: 343px;
+        margin-left: -376px; }
     .main-text__title {
       font-size: 25px;
       color: #ff9d00;
