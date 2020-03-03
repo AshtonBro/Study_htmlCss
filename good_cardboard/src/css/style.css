@@ -248,7 +248,7 @@ img {
     width: 180px; }
   .overlay .popup {
     top: 72px;
-    width: 275px; }
+    width: 290px; }
     .overlay .popup-title {
       font-size: 19px; }
     .overlay .popup-form {
@@ -317,6 +317,9 @@ img {
     .form-title {
       padding-right: 0;
       margin-bottom: 15px; }
+    .form-small {
+      display: flex;
+      font-size: 17px; }
   .button_big {
     border-bottom: 17px;
     vertical-align: middle;
@@ -334,6 +337,8 @@ img {
         font-size: 22px; }
         .overlay .popup-form-header span {
           font-size: 17px; }
+      .overlay .popup-form__note {
+        font-size: 17px; }
       .overlay .popup-form__input {
         width: 235px;
         margin-right: 5px; }
@@ -388,6 +393,9 @@ img {
       padding-right: 0;
       margin-bottom: 15px;
       font-size: 22px; }
+    .form-small {
+      display: flex;
+      font-size: 19px; }
   .button_big {
     border-bottom: 17px;
     vertical-align: middle;
@@ -405,6 +413,10 @@ img {
         font-size: 25px; }
         .overlay .popup-form-header span {
           font-size: 19px; }
+      .overlay .popup-form__note {
+        display: flex;
+        font-size: 19px;
+        margin-left: 114px; }
       .overlay .popup-form__input {
         width: 245px;
         margin-right: 9px; }
