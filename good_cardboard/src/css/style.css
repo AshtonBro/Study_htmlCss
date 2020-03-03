@@ -301,10 +301,11 @@ img {
         margin-top: 185px;
         margin-left: -248px; }
     .main-text__title {
-      font-size: 22px;
-      color: #ff9d00; }
+      font-size: 25px;
+      color: #ff9d00;
+      margin-bottom: 12px; }
     .main-text__subtitle {
-      font-size: 18px;
+      font-size: 21px;
       padding: 7px;
       margin-bottom: 5px; }
     .main-text__form {
@@ -314,9 +315,96 @@ img {
     display: flex;
     margin-bottom: 12px; }
     .form-title {
-      padding-right: 0; }
+      padding-right: 0;
+      margin-bottom: 15px; }
   .button_big {
     border-bottom: 17px;
     vertical-align: middle;
     margin-right: auto;
-    margin-left: auto; } }
+    margin-left: auto; }
+  .overlay .popup {
+    top: 100px;
+    width: 560px; }
+    .overlay .popup-title {
+      font-size: 22px; }
+    .overlay .popup-form {
+      padding: 45px 25px 50px 25px;
+      height: 390px; }
+      .overlay .popup-form-header {
+        font-size: 22px; }
+        .overlay .popup-form-header span {
+          font-size: 17px; }
+      .overlay .popup-form__input {
+        width: 235px;
+        margin-right: 5px; }
+      .overlay .popup-form__btn {
+        width: 100%; } }
+
+@media (min-width: 767.98px) and (max-width: 992px) {
+  .header {
+    padding: 15px; }
+    .header-contacts__phone {
+      font-size: 23px;
+      margin-right: 10px; }
+      .header-contacts__phones {
+        flex-direction: column; }
+      .header-contacts__phone:first-child {
+        border: none; }
+    .header-contacts__button {
+      display: inline-block;
+      padding: 17px; }
+  .hidden-mobile {
+    font-size: 18px; }
+  .main {
+    text-align: center;
+    padding-top: 50px; }
+    .main-img {
+      margin-right: auto;
+      margin-left: auto; }
+      .main-img::before {
+        width: 239px;
+        height: 235px;
+        left: 70%; }
+      .main-img::after {
+        content: url(../img/main/icon-2-small.png);
+        margin-top: 185px;
+        margin-left: -248px; }
+    .main-text__title {
+      font-size: 25px;
+      color: #ff9d00;
+      margin-bottom: 12px; }
+    .main-text__subtitle {
+      font-size: 21px;
+      padding: 7px;
+      margin-bottom: 5px; }
+    .main-text__form {
+      background-color: transparent;
+      padding: 10px; }
+  .form {
+    display: flex;
+    margin-bottom: 12px; }
+    .form-title {
+      padding-right: 0;
+      margin-bottom: 15px; }
+  .button_big {
+    border-bottom: 17px;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto; }
+  .overlay .popup {
+    top: 100px;
+    width: 560px; }
+    .overlay .popup-title {
+      font-size: 22px; }
+    .overlay .popup-form {
+      padding: 45px 25px 50px 25px;
+      height: 390px; }
+      .overlay .popup-form-header {
+        font-size: 22px; }
+        .overlay .popup-form-header span {
+          font-size: 17px; }
+      .overlay .popup-form__input {
+        width: 235px;
+        margin-right: 5px; }
+      .overlay .popup-form__btn {
+        width: 100%; } }

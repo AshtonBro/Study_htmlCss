@@ -105,10 +105,11 @@
                 margin-left: -248px
         &-text
             &__title
-                font-size: 22px
+                font-size: 25px
                 color: $active-color
+                margin-bottom: 12px
             &__subtitle
-                font-size: 18px
+                font-size: 21px
                 padding: 7px
                 margin-bottom: 5px
             &__form
@@ -119,9 +120,102 @@
         margin-bottom: 12px
         &-title
             padding-right: 0
+            margin-bottom: 15px
     .button
         &_big
             border-bottom: 17px
             vertical-align: middle
             margin-right: auto
             margin-left: auto
+    .overlay
+        .popup
+            top: 100px
+            width: 560px
+            &-title
+                font-size: 22px
+            &-form
+                padding: 45px 25px 50px 25px
+                height: 390px
+                &-header
+                    font-size: 22px
+                    span
+                        font-size: 17px
+                &__input
+                    width: 235px
+                    margin-right: 5px
+                &__btn
+                    width: 100%
+
+@media (min-width: 767.98px) and (max-width: 992px)
+    .header
+        padding: 15px
+        &-contacts
+                &__phone
+                    &s
+                        flex-direction: column
+                    font-size: 23px
+                    margin-right: 10px
+                    &:first-child
+                        border: none
+                &__button
+                    display: inline-block
+                    padding: 17px
+    .hidden
+        &-mobile
+            font-size: 18px
+    .main
+        text-align: center
+        padding-top: 50px
+        &-img
+            margin-right: auto
+            margin-left: auto
+            &::before
+                width: 239px
+                height: 235px
+                left: 70%
+            &::after
+                content: url(../img/main/icon-2-small.png)
+                margin-top: 185px
+                margin-left: -248px
+        &-text
+            &__title
+                font-size: 25px
+                color: $active-color
+                margin-bottom: 12px
+            &__subtitle
+                font-size: 21px
+                padding: 7px
+                margin-bottom: 5px
+            &__form
+                background-color: transparent
+                padding: 10px
+    .form
+        display: flex
+        margin-bottom: 12px
+        &-title
+            padding-right: 0
+            margin-bottom: 15px
+    .button
+        &_big
+            border-bottom: 17px
+            vertical-align: middle
+            margin-right: auto
+            margin-left: auto
+    .overlay
+        .popup
+            top: 100px
+            width: 560px
+            &-title
+                font-size: 22px
+            &-form
+                padding: 45px 25px 50px 25px
+                height: 390px
+                &-header
+                    font-size: 22px
+                    span
+                        font-size: 17px
+                &__input
+                    width: 235px
+                    margin-right: 5px
+                &__btn
+                    width: 100%
