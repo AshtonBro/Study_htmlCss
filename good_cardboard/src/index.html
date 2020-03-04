@@ -17,10 +17,7 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- jQuery-->
-    <script src="/src/script/jquery.js"></script>
-    <script src="/src/script/jquery.maskedinput.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
     
 </head>
 
@@ -138,24 +135,27 @@
         <!-- /.popup -->
     </div>
     <!-- /.overlay -->
-    
-      <script>
-        window.jQuery || document.write('<script src="/script/jquery.slim.min.js"><\/script>')
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.header-contacts__button').on('click', function () {
-                $('.overlay').show();
-            });
-            $('.popup-close').on('click', function () {
-                $('.overlay').hide();
-            });
-        });
-    </script>
 
+     <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script> window.jQuery || document.write('<script src="/src/script/jquery-2.2.4.min.js"><\/script>')</script>
+   
+    <script src="/src/script/jquery.maskedinput.js"></script>
+    
     <script type="text/javascript">
         jQuery(function($){
             $(".popup-form__input").mask("(999) 999-9999");
+        });
+    </script>
+
+   <script type="text/javascript">
+        $(document).ready(function() {
+            $('.header-contacts__button').on('click', function() {
+                $('.overlay').show();
+            });
+            $('.popup-close').on('click', function() {
+                $('.overlay').hide();
+            });
         });
     </script>
 
