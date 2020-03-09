@@ -454,3 +454,26 @@ img {
     font-size: 19px; }
   .button_big {
     width: 35%; } }
+
+.features {
+  background-color: #f4f4f4;
+  padding-top: 49px;
+  padding-bottom: 55px; }
+
+.numbers {
+  margin-bottom: 37px;
+  text-align: center; }
+  .numbers-block {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top; }
+    .numbers-block__title {
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 900;
+      color: #ff9d00; }
+      .numbers-block__title sup {
+        font-size: 18px; }
+    .numbers-block__text {
+      font-size: 16px;
+      font-weight: 300; }
