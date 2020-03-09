@@ -459,6 +459,16 @@ img {
   background-color: #f4f4f4;
   padding-top: 49px;
   padding-bottom: 55px; }
+  .features-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .features-block {
+    display: flex;
+    flex-basis: 31%;
+    background-color: #fff;
+    padding: 28px 19px;
+    margin-bottom: 30px; }
 
 .numbers {
   margin-bottom: 37px;

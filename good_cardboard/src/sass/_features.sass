@@ -2,7 +2,20 @@
     background-color: $bg-color-light
     padding-top: 49px
     padding-bottom: 55px
-    
+    &-blocks // Блок с 6-ю фичами делаем на флексах
+        display: flex
+        // эти элементы должны прилимать к кроям родительского блока
+        justify-content: space-between
+        // нам нужно задать перенос на следующию строчку
+        flex-wrap: wrap
+    &-block // сами блоки должны быть flex-basis
+        // сами блоки тоже сделаем флексами, для того что бы картинка встала слева, а текст с права
+        display: flex
+        flex-basis: 31%
+        background-color: #fff
+        padding: 28px 19px
+        margin-bottom: 30px
+
 .numbers
     margin-bottom: 37px
     text-align: center
