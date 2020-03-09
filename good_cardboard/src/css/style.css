@@ -88,10 +88,24 @@ img {
 input:focus, button:focus {
   outline: none; }
 
+.section-title {
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px; }
+  .section-title::after {
+    content: '';
+    margin-top: 12px;
+    display: block;
+    height: 8px;
+    background: url(../img/icon-products.png) center no-repeat;
+    background-size: 46px 40px; }
+
 .button {
   font-size: 14px;
   background-color: #ff9d00;
-  border: none;
+  border: 1px solid transparent;
   color: #fff;
   padding: 13px 22px;
   border-radius: 5px; }
@@ -101,6 +115,14 @@ input:focus, button:focus {
     width: 30%; }
   .button:hover {
     background-color: #ffb133;
+    cursor: pointer; }
+  .button-o {
+    background-color: transparent;
+    color: #373737;
+    border: 1px solid rgba(55, 55, 55, 0.5);
+    background-color: #ffb133;
+    color: #fff;
+    border: 1px solid transparent;
     cursor: pointer; }
 
 img {
@@ -465,10 +487,21 @@ img {
     flex-wrap: wrap; }
   .features-block {
     display: flex;
+    align-items: center;
     flex-basis: 31%;
     background-color: #fff;
     padding: 28px 19px;
     margin-bottom: 30px; }
+    .features-block__img {
+      flex-basis: 40%;
+      margin-right: 9px; }
+    .features-block__title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px; }
+    .features-block__descr {
+      font-size: 14px;
+      font-weight: 400px; }
 
 .numbers {
   margin-bottom: 37px;
@@ -487,3 +520,16 @@ img {
     .numbers-block__text {
       font-size: 16px;
       font-weight: 300; }
+
+.products {
+  padding-top: 57px;
+  padding-bottom: 73px; }
+  .products-block {
+    margin-bottom: 35px;
+    text-align: center; }
+    .products-block__img {
+      margin-bottom: 19px; }
+    .products-block__title {
+      margin-bottom: 28px;
+      font-size: 20px;
+      font-weight: 700; }

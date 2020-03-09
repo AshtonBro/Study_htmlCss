@@ -11,10 +11,21 @@
     &-block // сами блоки должны быть flex-basis
         // сами блоки тоже сделаем флексами, для того что бы картинка встала слева, а текст с права
         display: flex
+        align-items: center // картинки встанут напротив текст по середине
         flex-basis: 31%
         background-color: #fff
         padding: 28px 19px
         margin-bottom: 30px
+        &__img
+            flex-basis: 40%
+            margin-right: 9px
+        &__title
+            font-size: 15px
+            font-weight: 700
+            margin-bottom: 5px
+        &__descr
+            font-size: 14px
+            font-weight: 400px
 
 .numbers
     margin-bottom: 37px
