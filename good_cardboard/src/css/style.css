@@ -225,6 +225,97 @@ img {
         line-height: 30px;
         font-weight: center; }
 
+.features {
+  background-color: #f4f4f4;
+  padding-top: 49px;
+  padding-bottom: 55px; }
+  .features-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .features-block {
+    display: flex;
+    align-items: center;
+    flex-basis: 31%;
+    background-color: #fff;
+    padding: 28px 19px;
+    margin-bottom: 30px; }
+    .features-block__img {
+      flex-basis: 40%;
+      margin-right: 9px; }
+    .features-block__title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px; }
+    .features-block__descr {
+      font-size: 14px;
+      font-weight: 400px; }
+
+.numbers {
+  margin-bottom: 37px;
+  text-align: center; }
+  .numbers-block {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top; }
+    .numbers-block__title {
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 900;
+      color: #ff9d00; }
+      .numbers-block__title sup {
+        font-size: 18px; }
+    .numbers-block__text {
+      font-size: 16px;
+      font-weight: 300; }
+
+.products {
+  padding-top: 57px;
+  padding-bottom: 73px; }
+  .products-block {
+    margin-bottom: 35px;
+    text-align: center; }
+    .products-block__img {
+      margin-bottom: 19px;
+      min-height: 281px; }
+    .products-block__title {
+      margin-bottom: 28px;
+      font-size: 20px;
+      font-weight: 700; }
+    .products-block__button {
+      margin-right: 12px; }
+
+.clients {
+  padding-top: 91px;
+  padding-bottom: 61px;
+  text-align: center; }
+  .clients-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .clients-block {
+    display: flex;
+    margin-bottom: 37px;
+    height: 150px;
+    flex-basis: 22.5%;
+    align-items: center;
+    background-color: transparent;
+    color: #373737;
+    border: 1px solid rgba(49, 49, 49, 0.1);
+    border-radius: 3px;
+    filter: grayscale(100%);
+    filter: gray;
+    cursor: pointer;
+    transition: all 1s; }
+    .clients-block:hover {
+      filter: none;
+      filter: none; }
+    .clients-block__img {
+      justify-content: center;
+      vertical-align: middle;
+      margin-left: auto;
+      margin-right: auto; }
+
 @media (max-width: 576px) {
   .hidden-mobile {
     display: none; }
@@ -289,7 +380,55 @@ img {
         margin-top: 12px;
         margin-bottom: 10px; }
       .overlay .popup-form__btn {
-        width: 100%; } }
+        width: 100%; }
+  .features {
+    padding-top: 19px;
+    padding-bottom: 40px; }
+    .features-blocks {
+      align-items: center;
+      justify-content: center; }
+    .features-block {
+      flex-basis: 90%;
+      margin: 0 15px;
+      margin-bottom: 8px; }
+      .features-block__img {
+        min-width: 54px; }
+  .numbers-block {
+    display: block;
+    width: 100%; }
+    .numbers-block__title {
+      font-size: 30px;
+      margin-bottom: 7px; }
+    .numbers-block__text {
+      font-size: 14px;
+      margin-bottom: 14px; }
+  .products {
+    padding-top: 31px;
+    padding-bottom: 6px; }
+    .products-block__img {
+      display: table-cell;
+      vertical-align: middle; }
+    .products-block__button {
+      margin-right: 10px; }
+  .section-title {
+    margin: 0; }
+    .section-title::after {
+      content: '';
+      margin: 0;
+      background: url() center no-repeat; }
+  .clients {
+    padding: 0;
+    padding-top: 40px; }
+    .clients-blocks {
+      justify-content: center;
+      padding-bottom: 28px; }
+    .clients-block {
+      flex-basis: 43%;
+      margin: 4px;
+      filter: none;
+      filter: none; }
+      .clients-block__img {
+        padding: 15px; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .header {
@@ -477,94 +616,3 @@ img {
     font-size: 19px; }
   .button_big {
     width: 35%; } }
-
-.features {
-  background-color: #f4f4f4;
-  padding-top: 49px;
-  padding-bottom: 55px; }
-  .features-blocks {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  .features-block {
-    display: flex;
-    align-items: center;
-    flex-basis: 31%;
-    background-color: #fff;
-    padding: 28px 19px;
-    margin-bottom: 30px; }
-    .features-block__img {
-      flex-basis: 40%;
-      margin-right: 9px; }
-    .features-block__title {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 5px; }
-    .features-block__descr {
-      font-size: 14px;
-      font-weight: 400px; }
-
-.numbers {
-  margin-bottom: 37px;
-  text-align: center; }
-  .numbers-block {
-    display: inline-block;
-    width: 32%;
-    vertical-align: top; }
-    .numbers-block__title {
-      margin-bottom: 10px;
-      font-size: 36px;
-      font-weight: 900;
-      color: #ff9d00; }
-      .numbers-block__title sup {
-        font-size: 18px; }
-    .numbers-block__text {
-      font-size: 16px;
-      font-weight: 300; }
-
-.products {
-  padding-top: 57px;
-  padding-bottom: 73px; }
-  .products-block {
-    margin-bottom: 35px;
-    text-align: center; }
-    .products-block__img {
-      margin-bottom: 19px;
-      min-height: 281px; }
-    .products-block__title {
-      margin-bottom: 28px;
-      font-size: 20px;
-      font-weight: 700; }
-    .products-block__button {
-      margin-right: 12px; }
-
-.clients {
-  padding-top: 91px;
-  padding-bottom: 61px;
-  text-align: center; }
-  .clients-blocks {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  .clients-block {
-    display: flex;
-    margin-bottom: 37px;
-    height: 150px;
-    flex-basis: 23%;
-    align-items: center;
-    background-color: transparent;
-    color: #373737;
-    border: 1px solid rgba(49, 49, 49, 0.1);
-    border-radius: 3px;
-    filter: grayscale(100%);
-    filter: gray;
-    cursor: pointer;
-    transition: all 1s; }
-    .clients-block:hover {
-      filter: none;
-      filter: none; }
-    .clients-block__img {
-      justify-content: center;
-      vertical-align: middle;
-      margin-left: auto;
-      margin-right: auto; }
