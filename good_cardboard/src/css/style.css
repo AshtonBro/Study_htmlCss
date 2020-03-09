@@ -119,11 +119,12 @@ input:focus, button:focus {
   .button-o {
     background-color: transparent;
     color: #373737;
-    border: 1px solid rgba(55, 55, 55, 0.5);
-    background-color: #ffb133;
-    color: #fff;
-    border: 1px solid transparent;
-    cursor: pointer; }
+    border: 1px solid rgba(55, 55, 55, 0.5); }
+    .button-o:hover {
+      background-color: #ffb133;
+      color: #fff;
+      border: 1px solid transparent;
+      cursor: pointer; }
 
 img {
   vertical-align: middle; }
@@ -528,8 +529,11 @@ img {
     margin-bottom: 35px;
     text-align: center; }
     .products-block__img {
-      margin-bottom: 19px; }
+      margin-bottom: 19px;
+      min-height: 281px; }
     .products-block__title {
       margin-bottom: 28px;
       font-size: 20px;
       font-weight: 700; }
+    .products-block__button {
+      margin-right: 12px; }
