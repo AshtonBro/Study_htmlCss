@@ -61,14 +61,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                    <div class="main-img animated zoomInUp hidden-mobile">
+                    <div class="main-img animate hidden-mobile">
                         <img src="./img/main/boxes.png" alt="boxes">
                     </div>
                     <!-- /.main-img -->
                 </div>
                 <!-- /.col-5 -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                    <div class="main-text animated zoomInUp">
+                    <div class="main-text wow zoomInUp">
                         <h1 class="main-text__title">
                             Производство упаковки из гофрокартона
                         </h1>
@@ -140,7 +140,7 @@
  <section class="features">
      <div class="container">
              <!-- СТРОЧНО БЛОЧНЫЙ СПОСОБ-->
-         <div class="numbers animated flipInX">
+         <div class="numbers wow slideInUp">
 
              <div class="numbers-block">
                  <div class="numbers-block__title">
@@ -184,7 +184,7 @@
          <!-- НА ФЛЕКСАХ-->
          <div class="features-blocks">
 
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-delay='0.1s'>
                  <div class="features-block__img">
                      <img src="./img/features/icon-1.png" alt="Производство">
                  </div>
@@ -203,7 +203,7 @@
              </div>
              <!-- /.features-block -->
 
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-delay='0.2s'>
                  <div class="features-block__img">
                     <img src="./img/features/icon-2.png" alt="Бесплатные образцы">
                  </div>
@@ -222,7 +222,7 @@
              </div>
              <!-- /.features-block -->
              
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-delay='0.3s'>
                  <div class="features-block__img">
                     <img src="./img/features/icon-3.png" alt="Стабильное качество">
                  </div>
@@ -241,7 +241,7 @@
              </div>
              <!-- /.features-block -->
 
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                  <div class="features-block__img">
                     <img src="./img/features/icon-4.png" alt="Страховой запас">
                  </div>
@@ -260,7 +260,7 @@
              </div>
              <!-- /.features-block -->
 
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                  <div class="features-block__img">
                     <img src="./img/features/icon-5.png" alt="Флексопечать">
                  </div>
@@ -279,7 +279,7 @@
              </div>
              <!-- /.features-block -->
 
-             <div class="features-block">
+             <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                  <div class="features-block__img">
                     <img src="./img/features/icon-6.png" alt="Гидрофобные добавки">
                  </div>
@@ -309,7 +309,7 @@
  <!-- СЕТКА BOOSTRAP-->
 <section class="products">
     <div class="container">
-        <h2 class="section-title animated rubberBand">Наша продукция</h2>
+        <h2 class="section-title wow rubberBand">Наша продукция</h2>
         <!-- /.section-title -->
 
         <div class="row">
@@ -469,6 +469,10 @@
     </script>
 
     <script src="./js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

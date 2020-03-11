@@ -10,24 +10,36 @@ body {
 @-webkit-keyframes move {
   from {
     opacity: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     margin-bottom: -100px; }
   to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
     opacity: 1;
     margin-bottom: 0; } }
 
 @keyframes move {
   from {
     opacity: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     margin-bottom: -100px; }
   to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
     opacity: 1;
     margin-bottom: 0; } }
 
 .animate {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
   -webkit-animation-name: move;
   animation-name: move;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s; }
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 .main {
   position: relative;
@@ -49,6 +61,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 0; }
   .main-img {
+    opacity: 0;
     position: relative; }
     .main-img::before {
       content: '';
