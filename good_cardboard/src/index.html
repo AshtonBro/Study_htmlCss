@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
 
     
 </head>
@@ -60,14 +61,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                    <div class="main-img animate hidden-mobile">
+                    <div class="main-img animated zoomInUp hidden-mobile">
                         <img src="./img/main/boxes.png" alt="boxes">
                     </div>
                     <!-- /.main-img -->
                 </div>
                 <!-- /.col-5 -->
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                    <div class="main-text">
+                    <div class="main-text animated zoomInUp">
                         <h1 class="main-text__title">
                             Производство упаковки из гофрокартона
                         </h1>
@@ -139,7 +140,7 @@
  <section class="features">
      <div class="container">
              <!-- СТРОЧНО БЛОЧНЫЙ СПОСОБ-->
-         <div class="numbers">
+         <div class="numbers animated flipInX">
 
              <div class="numbers-block">
                  <div class="numbers-block__title">
@@ -308,7 +309,7 @@
  <!-- СЕТКА BOOSTRAP-->
 <section class="products">
     <div class="container">
-        <h2 class="section-title">Наша продукция</h2>
+        <h2 class="section-title animated rubberBand">Наша продукция</h2>
         <!-- /.section-title -->
 
         <div class="row">
@@ -445,10 +446,10 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
     <script>
-        window.jQuery || document.write('<script src="/src/script/jquery-2.2.4.min.js"><\/script>')
+        window.jQuery || document.write('<script src="./js/jquery-2.2.4.min.js"><\/script>')
     </script>
 
-    <!-- <script type="text/javascript" src="/src/script/jquery.maskedinput.js"></script> -->
+    <script type="text/javascript" src="./js/jquery.maskedinput.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -461,13 +462,13 @@
         });
     </script>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         jQuery(function ($) {
             $(".popup-form__input").mask("(999) 999-9999");
         });
-    </script> -->
+    </script>
 
-
+    <script src="./js/wow.min.js"></script>
 </body>
 
 </html>
