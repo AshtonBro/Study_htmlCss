@@ -168,6 +168,26 @@ input:focus, button:focus {
 img {
   vertical-align: middle; }
 
+.slider-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  height: 100%;
+  width: 22px;
+  border: 1px solid #ff9d00; }
+  .slider-arrow:hover {
+    cursor: pointer; }
+  .slider-arrow_left {
+    left: 0;
+    background: #fff url(../img/arrow-left.png) center no-repeat; }
+    .slider-arrow_left:hover {
+      background: #ff9d00 url(../img/arrow-left_active.png) center no-repeat; }
+  .slider-arrow_right {
+    right: 0;
+    background: #fff url(../img/arrow-right.png) center no-repeat; }
+    .slider-arrow_right:hover {
+      background: #ff9d00 url(../img/arrow-right_active.png) center no-repeat; }
+
 .header {
   padding: 15px 0;
   background-color: #fff; }
@@ -396,6 +416,18 @@ img {
 .production {
   padding-top: 87px;
   padding-bottom: 90px; }
+  .production-slider_top {
+    margin-bottom: 13px;
+    height: 377px;
+    overflow: hidden; }
+  .production-slider_bottom {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 78px;
+    overflow: hidden; }
+    .production-slider_bottom img {
+      margin: 0 6px;
+      outline: none; }
 
 @media (max-width: 576px) {
   .hidden-mobile {

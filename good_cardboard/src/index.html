@@ -403,9 +403,15 @@
         <container>
             <div class="row">
                 <div class="col-7">
-                    <div class="production-slider">
+                    <div class="production-slider_top">
                         <img src="./img/production/img-1.png" alt="#">
-                        <img src="./img/production/img-2.jpg" alt="#">
+                        <img src="./img/production/img-3.jpg" alt="#">
+                        <img src="./img/production/img-4.jpg" alt="#">
+                        <img src="./img/production/img-5.jpg" alt="#">
+                        <img src="./img/production/img-6.jpg" alt="#">
+                    </div>
+                    <div class="production-slider_bottom">
+                        <img src="./img/production/img-1.png" alt="#">
                         <img src="./img/production/img-3.jpg" alt="#">
                         <img src="./img/production/img-4.jpg" alt="#">
                         <img src="./img/production/img-5.jpg" alt="#">
@@ -499,7 +505,35 @@
     </section>
     <!-- /.clients -->
 
-
+    <section class="feedback">
+        <div class="container">
+            <h1 class="section-title">Отзывы о сотрудничестве</h1>
+            <!-- /.section-title -->
+            <div class="feedback-slider">
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-1.jpg" alt="#">
+                </div>
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-2.jpg" alt="#">
+                </div>
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-3.jpg" alt="#">
+                </div>
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-4.png" alt="#">
+                </div>
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-5.jpg" alt="#">
+                </div>
+                <div class="feedback-slider__item">
+                    <img src="./img/feedback/img-6.jpg" alt="#">
+                </div>
+            </div>
+            <!-- /.feedback-slider -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.feedback -->
 
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -533,7 +567,24 @@
     <script src="./js/wow.min.js"></script>
 
     <script>
-        $('.production-slider').slick();
+        $('.production-slider_top').slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.production-slider_bottom'
+        });
+        $('.production-slider_bottom').slick({
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<div class="slider-arrow slider-arrow_left"></div>',
+            nextArrow: '<div class="slider-arrow slider-arrow_right"></div>',
+            asNavFor: '.production-slider_top'
+        });
     </script>
 
     <script>

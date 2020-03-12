@@ -38,3 +38,24 @@
             cursor: pointer
 img
     vertical-align: middle
+
+.slider
+    &-arrow
+        position: absolute
+        top: 0
+        z-index: 99
+        height: 100%
+        width: 22px
+        border: 1px solid $active-color
+        &:hover
+            cursor: pointer
+        &_left
+            left: 0
+            background: #fff url(../img/arrow-left.png) center no-repeat
+            &:hover
+                 background: $active-color url(../img/arrow-left_active.png) center no-repeat
+        &_right
+            right: 0
+            background: #fff url(../img/arrow-right.png) center no-repeat
+            &:hover
+                background: $active-color url(../img/arrow-right_active.png) center no-repeat
