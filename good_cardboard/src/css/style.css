@@ -393,6 +393,10 @@ img {
       margin-left: auto;
       margin-right: auto; }
 
+.production {
+  padding-top: 87px;
+  padding-bottom: 90px; }
+
 @media (max-width: 576px) {
   .hidden-mobile {
     display: none; }
