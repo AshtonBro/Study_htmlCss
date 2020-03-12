@@ -175,6 +175,8 @@ img {
   height: 100%;
   width: 22px;
   border: 1px solid #ff9d00; }
+  .slider-arrow_prod {
+    border: 1px solid #ff9d00; }
   .slider-arrow:hover {
     cursor: pointer; }
   .slider-arrow_left {
@@ -428,6 +430,15 @@ img {
     .production-slider_bottom img {
       margin: 0 6px;
       outline: none; }
+
+.feedback {
+  padding-top: 55px;
+  padding-bottom: 66px;
+  background: #f4f4f4; }
+  .feedback img {
+    max-height: 374px;
+    max-width: 274px;
+    margin: 0 auto; }
 
 @media (max-width: 576px) {
   .hidden-mobile {
