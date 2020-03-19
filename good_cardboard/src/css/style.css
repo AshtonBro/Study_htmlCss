@@ -602,20 +602,20 @@ img {
   .production {
     padding-top: 28px;
     padding-bottom: 52px; }
-    .production-text {
+    .production-text__title {
+      margin: 0;
+      padding-left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
       text-align: center; }
-      .production-text__title {
-        margin: 0;
-        padding-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 20px; }
-      .production-text__descr {
-        padding: 17px 15px 2px 15px;
-        font-size: 14px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 18px; }
+    .production-text__descr {
+      padding: 17px 15px 2px 15px;
+      font-size: 14px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 18px;
+      text-align: center; }
   .row {
     display: -webkit-box;
     display: -ms-flexbox;
