@@ -2,25 +2,28 @@
     padding-top: 87px
     padding-bottom: 90px
     &-text
+        min-width: 379px
         &__title
+            position: relative
             font-size: 28px
-            color: #fff
+            color: $text-color-light
             background-color: $active-color
             padding-top: 17.5px
             padding-bottom: 17.5px
-            padding-left: 30px
-            border: none
             margin-bottom: 29px
-            margin-left: 0px
-            max-width: 380px
+            margin-left: -4%
+            padding-left: 10%
+            width: 105%
+            z-index: -1
         &__descr
             font-size: 16px
-            font-weight: lighter
-            padding-left: 30px
+            font-weight: 300
             line-height: 24px
-            max-width: 380px
+            padding-left: 30px
             text-align: justify
     &-slider
+        position: relative
+        z-index: 2
         &_top
             margin-bottom: 13px
             height: 377px
