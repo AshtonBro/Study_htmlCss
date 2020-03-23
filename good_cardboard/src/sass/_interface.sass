@@ -61,3 +61,16 @@ img
             background: #fff url(../img/arrow-right.png) center no-repeat
             &:hover
                 background: $active-color url(../img/arrow-right_active.png) center no-repeat
+
+.dark-bg
+    &::before /* Затемнение фонового изображение на главном экране */
+        content: ''
+        /* Делаем элемент блочным */
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.6)
+        z-index: 0
