@@ -42,24 +42,11 @@ body {
   animation-fill-mode: forwards; }
 
 .main {
-  position: relative;
   padding-top: 65px;
   padding-bottom: 60px;
   background: #373737 url(../img/main/header-background.jpg) center no-repeat;
   background-size: cover;
-  color: #fff;
-  z-index: 2; }
-  .main::before {
-    content: '';
-    /* Делаем элемент блочным */
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 0; }
+  color: #fff; }
   .main-img {
     opacity: 0;
     position: relative; }
@@ -190,17 +177,20 @@ img {
     .slider-arrow_right:hover {
       background: #ff9d00 url(../img/arrow-right_active.png) center no-repeat; }
 
-.dark-bg::before {
-  content: '';
-  /* Делаем элемент блочным */
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0; }
+.dark-bg {
+  position: relative;
+  z-index: 2; }
+  .dark-bg::before {
+    content: '';
+    /* Делаем элемент блочным */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1; }
 
 .header {
   padding: 15px 0;
