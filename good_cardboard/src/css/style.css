@@ -472,6 +472,10 @@ img {
     max-width: 274px;
     margin: 0 auto; }
 
+.offer {
+  padding-top: 64px;
+  padding-bottom: 69px; }
+
 @media (max-width: 576px) {
   .hidden-mobile {
     display: none; }
