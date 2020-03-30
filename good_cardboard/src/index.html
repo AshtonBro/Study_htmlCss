@@ -26,6 +26,25 @@
 
 <body>
 
+    
+    <section class="main">
+        <div class="menu-list">
+            <ul>
+                <li href="#">1</li>
+                <li href="#">2</li>
+                <li href="#">3</li>
+                <li href="#">4</li>
+                <li href="#">5</li>
+                <li href="#">6</li>
+                <li href="#">7</li>
+                <li href="#">8</li>
+                <li href="#">9</li>
+            </ul>
+        </div>
+        <!-- /.menu-list -->
+    </section>
+    <!-- /.main -->`
+
     <header class="header">
         <div class="container">
             <div class="row align-items-center">
@@ -572,7 +591,10 @@
 
     <script type="text/javascript">
         jQuery(function ($) {
-            $(".popup-form__input").mask("(999) 999-9999");
+            $(".popup-form__input").mask("+7(999) 999-9999");
+        });
+        jQuery(function ($) {
+            $(".form__input").mask("+7(999) 999-9999");
         });
     </script>
 
