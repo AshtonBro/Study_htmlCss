@@ -6,18 +6,26 @@
         justify-content: center;
         ul
             display: flex
-            justify-content: space-between
+            justify-content: center
             padding: 0
-            align-items: center
-            flex-basis: auto
+            margin: 12px
         li
             list-style-type: none
-            margin: 0 2%
+            margin-left: 3%
             flex-basis: auto
+            align-items: center
+            white-space: nowrap
+            &:not(:last-child)
+                border-right: 1px solid #cfcfd042
+                border-right-style: dotted
+                padding-right: 3%
+            &:first-child
+                margin-left: 0
+
         a
             margin-top: 0
             font-size: 12px
-            line-height: 22px
+            line-height: 21px
             text-transform: uppercase
             color: $text-color-light
             text-decoration: none
