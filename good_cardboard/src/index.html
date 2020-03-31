@@ -738,6 +738,26 @@
     <script>
         new WOW().init();
     </script>
+
+<script>
+    $(document).ready(function() {
+     let menuLink = $('.menu-mobile')
+     let menuLinkActive = $('.menu-mobile_active')
+     let menu = $('.menu')
+     let navLink = $('.menu a');
+
+
+     menuLink.click(function() {
+        menuLink.toggleClass('menu-mobile_active')
+        menu.toggleClass('menu_active')
+     })
+     navLink.click(function() {
+        menuLink.removeClass('menu-mobile_active')
+        menu.toggleClass('menu_active')
+     });
+    });
+ </script>
+
 </body>
 
 </html>

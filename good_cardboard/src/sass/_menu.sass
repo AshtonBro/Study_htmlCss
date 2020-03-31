@@ -33,3 +33,85 @@
             color: $text-color-light
             text-decoration: none
             transition: all 0.2s
+
+@media (max-width: 767.98px)
+    //Отключаем вертикальное меню, включаем мобильное!
+    
+    .menu
+        &-list
+            li
+                border-right: none
+        &-mobile
+            display: block
+            width: 50px
+            height: 50px
+            background-color: $text-color-dark
+            border-radius: 50%
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+            position: fixed
+            top: 20px
+            left: 20px
+            z-index: 9
+            span, span:before, span:after
+                display: block
+                height: 2px
+                width: 18px
+                position: absolute
+                left: 50%
+                margin-left: -9px
+                background-color: $text-color-light
+                top: 50%
+                margin-top: -1px
+            span:before 
+                transition: all 0.2s
+                content: ''
+                margin-top: -6px
+            
+            span:after 
+                transition: all 0.2s
+                content: ''
+                margin-top: 4px
+            
+            &_active
+                span
+                    background-color: transparent
+                    &:before
+                        transform: rotate(135deg)
+                        margin-top: 0
+                    &:after
+                        transform: rotate(-135deg)
+                        margin-top: 0
+        opacity: 0.85
+        background-color: $text-color-dark
+        position: fixed
+        width: 100vw
+        height: 100%;
+        z-index: 8
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.5s
+        left: -100vw
+        &_active
+            left: 0
+        ul
+            display: block
+            list-style: none
+            padding: 0
+            text-align: center
+            li
+                margin: 0
+                padding: 0
+                width: 100%
+            a
+                display: block
+                line-height: 4
+                color: #fff
+                width: 100%
+                font-weight: 100
+                letter-spacing: 4px
+                transition: all 0.2s
+                z-index: 9
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.842)
+                    text-decoration: none
