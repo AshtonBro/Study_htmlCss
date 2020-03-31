@@ -672,10 +672,20 @@ img {
       margin-top: 8px; }
     .contacts-block__text {
       margin-top: 28px; }
+    .contacts-block__img {
+      position: absolute;
+      height: 22px;
+      width: 22px;
+      margin-left: -33px; }
 
 .map {
   width: 100%;
   height: 550px; }
+
+.footer-block {
+  height: 88px;
+  width: 100%;
+  background-color: #1b1b1b; }
 
 @media (max-width: 576px) {
   .hidden-mobile {
