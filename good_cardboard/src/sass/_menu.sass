@@ -26,6 +26,7 @@
             &:first-child
                 margin-left: 0
         a
+            display: block
             margin-top: 0
             font-size: 12px
             line-height: 21px
@@ -49,7 +50,7 @@
             height: 50px
             background-color: $text-color-dark
             border-radius: 50%
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+            box-shadow: 2px 4px 17px rgba(221, 209, 209, 0.4)
             position: fixed
             top: 20px
             left: 20px
@@ -83,13 +84,13 @@
                     &:after
                         transform: rotate(-135deg)
                         margin-top: 0
-        opacity: 0.85
+        opacity: 0.90
         background-color: $text-color-dark
         position: fixed
         width: 100vw
-        height: 100%;
+        height: 100%
+        display: block
         z-index: 8
-        display: flex
         justify-content: center
         align-items: center
         transition: all 0.5s
@@ -102,9 +103,11 @@
             padding: 0
             text-align: center
             li
+                width: 100%
                 margin: 0
                 padding: 0
-                width: 100%
+                &:last-child
+                    padding-right: 2.8%
             a
                 display: block
                 line-height: 4
@@ -113,11 +116,10 @@
                 font-weight: 100
                 letter-spacing: 2px
                 transition: all 0.2s
-                z-index: 9
+                z-index: 1
                 &:hover
-                    background-color: rgba(255, 255, 255, 0.842)
+                    background-color: rgba(175, 171, 171, 0.657)
                     text-decoration: none
-
 @media (max-width: 576px)
     .menu
         &-mobile
