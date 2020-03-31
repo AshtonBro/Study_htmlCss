@@ -21,6 +21,9 @@
     <!-- <link rel="stylesheet" href="./fotorama-4.6.4/fotorama.css"> -->
     <link rel="stylesheet" href="./slick/slick-theme.css">
     <link rel="stylesheet" href="./slick/slick.css">
+    <!--Yandex map sendbox-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2640f456-537d-4813-9aa9-a6cf13a7dd91"
+        type="text/javascript"></script>
 
 </head>
 
@@ -28,8 +31,8 @@
 
     <a href="#menu" class="menu-mobile">
         <span></span>
-     </a>
-     
+    </a>
+
     <section class="menu">
         <div class="menu-list">
             <ul>
@@ -418,7 +421,7 @@
 
     <section class="offer dark-bg">
         <div class="container">
-            <h2 class="offer-title"> Получите индивидуальное предложение</h2> 
+            <h2 class="offer-title"> Получите индивидуальное предложение</h2>
             <span class="offer-title_small">на производство и поставку изделий</span>
             <!-- /.offer-title -->
             <div class="offer-form">
@@ -465,9 +468,12 @@
                         <!-- /.production-text__title -->
                         <div class="production-text__descr">
                             Современное оборудование позволяет произ- водить до 5 миллионов квадратных метров
-                            гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.<br><p></p>
+                            гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам
+                            заказчика.<br>
+                            <p></p>
                             Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения,
-                            транспортировки и производства вашей продукции.<br><p></p>
+                            транспортировки и производства вашей продукции.<br>
+                            <p></p>
                             Возможно нанесение цветной флексопечати на поверхность коробов.
                         </div>
                         <!-- /.production-text__descr -->
@@ -573,22 +579,63 @@
     <!-- /.feedback -->
 
     <section class="contacts">
+        <!-- yandex maps-->
+        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f16c7e67e7be86eb498039025c5d592f7b86dcb9267c354dd7a2dd47e896dba&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script> -->
+        <!-- google maps-->
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.4285919046038!2d55.79455045118099!3d54.68448518018442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d925a0032367eb%3A0xe08a0953635359de!2z0JzQsNC50LrQvtC_0YHQutCw0Y8g0YPQuy4sIDY1LzIsINCj0YTQsCwg0KDQtdGB0L8uINCR0LDRiNC60L7RgNGC0L7RgdGC0LDQvSwgNDUwMDk1!5e0!3m2!1sru!2sru!4v1585662146966!5m2!1sru!2sru" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+        <!-- 2Gis maps-->
         <div class="contacts-block">
-            <div class="contacts-block__address">
+            <div id="map" class="map">
+                <script>
+                    ymaps.ready(function () {
+                        var myMap = new ymaps.Map('map', {
+                                center: [54.763914, 56.016246],
+                                zoom: 13
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            }),
+            
+                            // Создаём макет содержимого.
+                            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                            ),
+            
+                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                                hintContent: 'Собственный значок метки',
+                                balloonContent: 'Это красивая метка'
+                            }, {
+                                // Опции.
+                                // Необходимо указать данный тип макета.
+                                iconLayout: 'default#image',
+                                // Своё изображение иконки метки.
+                                iconImageHref: 'img/header/header-logo-mobile.png',
+                                // Размеры метки.
+                                iconImageSize: [41, 41],
+                                // Смещение левого верхнего угла иконки относительно
+                                // её "ножки" (точки привязки).
+                                iconImageOffset: [-5, -38]
+                            });
+            
+                        myMap.geoObjects
+                            .add(myPlacemark);
+                    });
+                </script>
+            </div>
+            <div class="contacts-block__address contacts-block__text">
                 <span class="contacts-block__title">Адрес офиса</span>
                 г. Уфа, Проспект октября, 46
                 <span class="contacts-block__title">Адрес склада</span>
                 г. Уфа, ул. Майкопская, 65/2
             </div>
-            <div class="contacts-block__phone">
+            <div class="contacts-block__phone contacts-block__text">
                 <span class="contacts-block__title">Тел. отдела продаж:</span>
-                    8 (347) 271-54-28<br>
-                    8 (937) 363-30-00
+                8 (347) 271-54-28<br>
+                8 (937) 363-30-00
             </div>
-            <div class="contacts-block__cta">
+            <div class="contacts-block__cta contacts-block__text">
                 <button class="button">Заказать звонок</button>
             </div>
-            <div class="contacts-block__email">
+            <div class="contacts-block__email contacts-block__text">
                 <span class="contacts-block__title">Е-mail</span>
                 urals.karton@gmail.com
             </div>
@@ -631,7 +678,7 @@
     </script>
 
     <!-- <script src="./fotorama-4.6.4/fotorama.js"></script> -->
-    
+
     <script src="./slick/slick.min.js"></script>
     <script src="./js/wow.min.js"></script>
 
@@ -643,55 +690,54 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             asNavFor: '.production-slider_bottom',
-            responsive: [
-                {
-                breakpoint: 1200,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 576,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 576,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 320,
-                settings: {
-                    autoplay: false,
-                    arrows: false,
-                    centerMode: true,
-                    autoplay: false,
-                }
+                    breakpoint: 320,
+                    settings: {
+                        autoplay: false,
+                        arrows: false,
+                        centerMode: true,
+                        autoplay: false,
+                    }
                 }
             ]
         });
@@ -704,55 +750,54 @@
             prevArrow: '<div class="slider-arrow slider-arrow_prod slider-arrow_left"></div>',
             nextArrow: '<div class="slider-arrow slider-arrow_prod slider-arrow_right"></div>',
             asNavFor: '.production-slider_top',
-            responsive: [
-                {
-                breakpoint: 1200,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '50px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '50px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 576,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
+                    breakpoint: 576,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
                 },
                 {
-                breakpoint: 320,
-                settings: {
-                    autoplay: false,
-                    arrows: false,
-                    centerMode: true,
-                    autoplay: false,
-                }
+                    breakpoint: 320,
+                    settings: {
+                        autoplay: false,
+                        arrows: false,
+                        centerMode: true,
+                        autoplay: false,
+                    }
                 }
             ]
         });
@@ -768,25 +813,24 @@
         new WOW().init();
     </script>
 
-<script>
-    $(document).ready(function() {
-     let menuLink = $('.menu-mobile')
-     let menuLinkActive = $('.menu-mobile_active')
-     let menu = $('.menu')
-     let navLink = $('.menu a');
+    <script>
+        $(document).ready(function () {
+            let menuLink = $('.menu-mobile')
+            let menuLinkActive = $('.menu-mobile_active')
+            let menu = $('.menu')
+            let navLink = $('.menu a');
 
 
-     menuLink.click(function() {
-        menuLink.toggleClass('menu-mobile_active')
-        menu.toggleClass('menu_active')
-     })
-     navLink.click(function() {
-        menuLink.removeClass('menu-mobile_active')
-        menu.toggleClass('menu_active')
-     });
-    });
- </script>
-
+            menuLink.click(function () {
+                menuLink.toggleClass('menu-mobile_active')
+                menu.toggleClass('menu_active')
+            })
+            navLink.click(function () {
+                menuLink.removeClass('menu-mobile_active')
+                menu.toggleClass('menu_active')
+            });
+        });
+    </script>
 </body>
 
 </html>
