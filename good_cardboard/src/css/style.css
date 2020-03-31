@@ -653,6 +653,22 @@ img {
   .offer-form__button {
     margin-bottom: 9px; }
 
+.contacts {
+  padding-top: 73px;
+  padding-bottom: 87px; }
+  .contacts-block {
+    background-color: #fff;
+    padding-top: 33px;
+    padding-bottom: 39px;
+    padding-left: 34px;
+    padding-right: 34px; }
+    .contacts-block__title {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      margin-top: 28px; }
+
 @media (max-width: 576px) {
   .hidden-mobile {
     display: none; }
