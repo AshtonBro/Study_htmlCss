@@ -34,7 +34,6 @@ gulp.task('default', ['serve']);
 gulp.task('deploy', () => {
 
 	var conn = ftp.create( {
-		
 		log:      gutil.log
 	} );
 
