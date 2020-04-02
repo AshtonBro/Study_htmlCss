@@ -114,7 +114,7 @@
                                 </span>
                             </div>
                             <!-- /.form-title -->
-                            <form action="mailer/smart.php" method="POST" class="form">
+                            <form action="mailer/telegram.php" method="POST" class="form">
                                 <input class="form__input" type="tel" name="user_phone" placeholder="Введите номер телефона">
                                 <button class="button button_big" type="submit">Оставить заявку!</button>
                             </form>
@@ -425,7 +425,7 @@
             <span class="offer-title_small">на производство и поставку изделий</span>
             <!-- /.offer-title -->
             <div class="offer-form">
-                <form action="mailer/smart.php" method="POST">
+                <form action="mailer/telegram.php" method="POST" class="form">
                     <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
                     <input class="form__input offer-form__input" type="tel" name="user_phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
                     <button class="button offer-form__button">Оставить заявку</button>
@@ -662,13 +662,31 @@
     </script>
 
 <script>
-    
-    $("form").submit(function(event) {
+    $(".main-form").submit(function(event) {
         event.preventDefault();
 
         $.ajax({
             type: "POST",
             url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+            alert("Сообщение успешно отправлено");
+            
+            $("form").trigger("reset");
+        });
+        return false;
+    });
+</script>
+
+<script>
+    $(".form").submit(function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/telegram.php",
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");

@@ -1,19 +1,10 @@
 <?php 
 
 $phone = $_POST['user_phone'];
-$token = "1072615208:AAGt9rrV1Ky8WTaUwt5cssrWrYRX3-GQX2Q";
-$chat_id = "-1001453187958";
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
-
-$arr = array(
-    'Номер телефона' => $phone
-);
-foreach ($arr as $key => $value) {
-    $txt .= "<br>".$key."</b> ".$value. "%0A";
-};
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -41,8 +32,6 @@ $mail->Body    = '
 	Телефон: ' . $phone . '';
 $mail->AltBody = 'Это альтернативный текст';
 
-$sendtoTelegtam = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
-
 if(!$mail->send()) {
     return false;
 } else {
@@ -50,3 +39,4 @@ if(!$mail->send()) {
 }
 
 ?>
+
