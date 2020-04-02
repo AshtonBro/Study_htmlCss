@@ -71,7 +71,7 @@
                                 8 (937) 363-30-00
                             </div>
                         </div>
-                        <button class="header-contacts__button button">
+                        <button class="header-contacts__button button popup__button">
                             <img src="./img/header/icon-phone.png" alt="phone">
                             <span class="hidden-mobile">Заказать звонок</span>
                         </button>
@@ -114,7 +114,7 @@
                                 </span>
                             </div>
                             <!-- /.form-title -->
-                            <form action="#" class="form">
+                            <form action="./mailer/smart.php" method="POST" class="form">
                                 <input class="form__input" type="tel" placeholder="Введите номер телефона">
                                 <button class="button button_big" type="submit">Оставить заявку!</button>
                             </form>
@@ -140,7 +140,7 @@
             <div class="popup-close">&times;</div>
             <!-- /.popup-close -->
             <div class="popup-form">
-                <form action="#" class="main-form">
+                <form action="./mailer/smart.php" method="POST" class="main-form">
                     <div class="popup-form-header">
                         Получите индивидуальное предложение<br>
                         <span>на производство и поставку изделий</span>
@@ -348,7 +348,7 @@
                         <!-- /.products-block__title -->
                         <div class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
-                            <!-- /.button button-o --><button class="button">Получить расчет</button> <!-- /.button -->
+                            <button class="button popup__button">Получить расчет</button>
                         </div>
                         <!-- /.products-block__buttons -->
                     </div>
@@ -365,7 +365,7 @@
                         <!-- /.products-block__title -->
                         <div class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
-                            <!-- /.button button-o --><button class="button">Получить расчет</button> <!-- /.button -->
+                            <button class="button popup__button">Получить расчет</button>
                         </div>
                         <!-- /.products-block__buttons -->
                     </div>
@@ -386,7 +386,7 @@
                         <!-- /.products-block__title -->
                         <div class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
-                            <!-- /.button button-o --><button class="button">Получить расчет</button> <!-- /.button -->
+                            <button class="button popup__button">Получить расчет</button>
                         </div>
                         <!-- /.products-block__buttons -->
                     </div>
@@ -403,7 +403,7 @@
                         <!-- /.products-block__title -->
                         <div class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
-                            <!-- /.button button-o --><button class="button">Получить расчет</button> <!-- /.button -->
+                            <button class="button popup__button">Получить расчет</button>
                         </div>
                         <!-- /.products-block__buttons -->
                     </div>
@@ -425,7 +425,7 @@
             <span class="offer-title_small">на производство и поставку изделий</span>
             <!-- /.offer-title -->
             <div class="offer-form">
-                <form action="#">
+                <form action="./mailer/smart.php" method="POST">
                     <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
                     <input class="form__input offer-form__input" type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
                     <button class="button offer-form__button" type="submit">Оставить заявку</button>
@@ -601,7 +601,7 @@
                 8 (937) 363-30-00
             </div>
             <div class="contacts-block__cta contacts-block__text">
-                <button class="button contacts-block__button">Заказать звонок</button>
+                <button class="button contacts-block__button popup__button">Заказать звонок</button>
             </div>
             <div class="contacts-block__email contacts-block__text">
                 <img src="./img/contacts/email.svg" alt="email" class="contacts-block__img">
@@ -643,7 +643,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.header-contacts__button').on('click', function () {
+            $('.popup__button').on('click', function () {
                 $('.overlay').show();
             });
             $('.popup-close').on('click', function () {
@@ -660,6 +660,22 @@
             $(".form__input").mask("+7(999) 999-9999");
         });
     </script>
+
+<script>
+    $("form").submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "/mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            alert("Сообщение успешно отправлено");
+            $("#form").trigger("reset");
+        });
+        return false;
+    });
+</script>
 
     <!-- <script src="./fotorama-4.6.4/fotorama.js"></script> -->
 
