@@ -114,8 +114,8 @@
                                 </span>
                             </div>
                             <!-- /.form-title -->
-                            <form action="./mailer/smart.php" method="POST" class="form">
-                                <input class="form__input" type="tel" placeholder="Введите номер телефона">
+                            <form action="mailer/smart.php" method="POST" class="form">
+                                <input class="form__input" type="tel" name="user_phone" placeholder="Введите номер телефона">
                                 <button class="button button_big" type="submit">Оставить заявку!</button>
                             </form>
                             <small class="form-small">*Минимальный заказ 500шт</small>
@@ -140,14 +140,14 @@
             <div class="popup-close">&times;</div>
             <!-- /.popup-close -->
             <div class="popup-form">
-                <form action="./mailer/smart.php" method="POST" class="main-form">
+                <form action="mailer/smart.php" method="POST" class="main-form">
                     <div class="popup-form-header">
                         Получите индивидуальное предложение<br>
                         <span>на производство и поставку изделий</span>
                         <label for="phone" class="popup-form__label">
                             Введите ваш номер телефона:
                         </label>
-                        <input type="phone" class="popup-form__input" name="phone" required>
+                        <input type="phone" name="user_phone" class="popup-form__input" required>
                         <button class="button popup-form_btn">
                             Оставить заявку!
                         </button>
@@ -425,12 +425,12 @@
             <span class="offer-title_small">на производство и поставку изделий</span>
             <!-- /.offer-title -->
             <div class="offer-form">
-                <form action="./mailer/smart.php" method="POST">
+                <form action="mailer/smart.php" method="POST">
                     <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
-                    <input class="form__input offer-form__input" type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
-                    <button class="button offer-form__button" type="submit">Оставить заявку</button>
+                    <input class="form__input offer-form__input" type="tel" name="user_phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    <button class="button offer-form__button">Оставить заявку</button>
                 </form>
-                <small class="form-small">*Минимальный заказ 500шт</small>
+                <small class="form-small">*Минимальный заказ 50шт</small>
             </div>
             <!-- /.offer-form -->
         </div>
@@ -666,12 +666,12 @@
         event.preventDefault();
         $.ajax({
             type: "POST",
-            url: "/mailer/smart.php",
+            url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
             alert("Сообщение успешно отправлено");
-            $("#form").trigger("reset");
+            $("form").trigger("reset");
         });
         return false;
     });

@@ -16,7 +16,7 @@ $mail->Password = 'Takemeprofit163';                           // Наш пар�
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('formsendphp@gmail.com', 'Форма обратной связи "Добрый картон"');   // От кого письмо 
+$mail->setFrom('formsendphp@gmail.com', 'Форма обратной связи Добрый картон');   // От кого письмо 
 $mail->addAddress('solovyevmeh163@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
