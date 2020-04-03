@@ -25,6 +25,58 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2640f456-537d-4813-9aa9-a6cf13a7dd91"
         type="text/javascript"></script>
 
+    <!-- Yandex Metrika -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(61610518, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true
+        });
+    </script> <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61610518" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> 
+    <!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
+        })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+        ym(61598311, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script> <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61598311" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> 
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162702101-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162702101-1');
+    </script>
+
 </head>
 
 <body>
@@ -71,7 +123,8 @@
                                 8 (937) 363-30-00
                             </div>
                         </div>
-                        <button class="header-contacts__button button popup__button">
+                        <button onclick="ym(61598311, 'reachGoal', 'topBtn'); return true;"
+                            class="header-contacts__button button popup__button">
                             <img src="./img/header/icon-phone.png" alt="phone">
                             <span class="hidden-mobile">Заказать звонок</span>
                         </button>
@@ -115,8 +168,10 @@
                             </div>
                             <!-- /.form-title -->
                             <form action="mailer/telegram.php" method="POST" class="form">
-                                <input class="form__input" type="tel" name="user_phone" placeholder="Введите номер телефона">
-                                <button class="button button_big" type="submit">Оставить заявку!</button>
+                                <input class="form__input" type="tel" name="user_phone"
+                                    placeholder="Введите номер телефона">
+                                <button onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                                    class="button button_big" type="submit">Оставить заявку!</button>
                             </form>
                             <small class="form-small">*Минимальный заказ 500шт</small>
                             <!-- /.small form-small -->
@@ -148,7 +203,8 @@
                             Введите ваш номер телефона:
                         </label>
                         <input type="phone" name="user_phone" class="popup-form__input" required>
-                        <button class="button popup-form_btn">
+                        <button <input type="button" onclick="ym(61610518, 'reachGoal', 'pushTheBtn'); return true;"
+                            class="button popup-form_btn">
                             Оставить заявку!
                         </button>
                         <div class="popup-form__note">
@@ -346,7 +402,8 @@
                             Гофрокороб 4-х клапанный
                         </div>
                         <!-- /.products-block__title -->
-                        <div class="products-block__buttons"><button
+                        <div onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                            class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
                             <button class="button popup__button">Получить расчет</button>
                         </div>
@@ -363,7 +420,8 @@
                             Гофролоток
                         </div>
                         <!-- /.products-block__title -->
-                        <div class="products-block__buttons"><button
+                        <div onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                            class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
                             <button class="button popup__button">Получить расчет</button>
                         </div>
@@ -384,7 +442,8 @@
                             Гофрокороб самосборный (сложная высечка)
                         </div>
                         <!-- /.products-block__title -->
-                        <div class="products-block__buttons"><button
+                        <div onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                            class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
                             <button class="button popup__button">Получить расчет</button>
                         </div>
@@ -401,7 +460,8 @@
                             Листовой гофрокартон
                         </div>
                         <!-- /.products-block__title -->
-                        <div class="products-block__buttons"><button
+                        <div onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                            class="products-block__buttons"><button
                                 class="button button-o products-block__button">Подробнее</button>
                             <button class="button popup__button">Получить расчет</button>
                         </div>
@@ -427,8 +487,10 @@
             <div class="offer-form">
                 <form action="mailer/telegram.php" method="POST" class="form">
                     <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
-                    <input class="form__input offer-form__input" type="tel" name="user_phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
-                    <button class="button offer-form__button">Оставить заявку</button>
+                    <input class="form__input offer-form__input" type="tel" name="user_phone"
+                        placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    <button onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
+                        class="button offer-form__button">Оставить заявку</button>
                 </form>
                 <small class="form-small">*Минимальный заказ 50шт</small>
             </div>
@@ -625,7 +687,7 @@
     </section>
     <!-- /.footer -->
 
-        <!-- создание формы ПРИМЕР
+    <!-- создание формы ПРИМЕР
         <form action="mail.php" method="POST">
             <input type="text" name="user_name" placeholder="Введите имя">
             <input type="tel" name="user_phone" placeholder="Введите телефон">
@@ -661,43 +723,43 @@
         });
     </script>
 
-<script>
-    $(".main-form").submit(function(event) {
-        event.preventDefault();
+    <script>
+        $(".main-form").submit(function (event) {
+            event.preventDefault();
 
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
-        }).done(function() {
-            $(this).find("input").val("");
+            $.ajax({
+                type: "POST",
+                url: "mailer/smart.php",
+                data: $(this).serialize()
+            }).done(function () {
+                $(this).find("input").val("");
 
-            alert("Сообщение успешно отправлено");
-            
-            $("form").trigger("reset");
+                alert("Сообщение успешно отправлено");
+
+                $("form").trigger("reset");
+            });
+            return false;
         });
-        return false;
-    });
-</script>
+    </script>
 
-<script>
-    $(".form").submit(function(event) {
-        event.preventDefault();
+    <script>
+        $(".form").submit(function (event) {
+            event.preventDefault();
 
-        $.ajax({
-            type: "POST",
-            url: "mailer/telegram.php",
-            data: $(this).serialize()
-        }).done(function() {
-            $(this).find("input").val("");
+            $.ajax({
+                type: "POST",
+                url: "mailer/telegram.php",
+                data: $(this).serialize()
+            }).done(function () {
+                $(this).find("input").val("");
 
-            alert("Сообщение успешно отправлено");
-            
-            $("form").trigger("reset");
+                alert("Сообщение успешно отправлено");
+
+                $("form").trigger("reset");
+            });
+            return false;
         });
-        return false;
-    });
-</script>
+    </script>
 
     <!-- <script src="./fotorama-4.6.4/fotorama.js"></script> -->
 
