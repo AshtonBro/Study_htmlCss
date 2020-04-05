@@ -6,26 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Добрый картон</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/Roboto-Regular.ttf">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="./css/animate.css">
 
     <!-- <link rel="stylesheet" href="./fotorama-4.6.4/fotorama.css"> -->
     <link rel="stylesheet" href="./slick/slick-theme.css">
     <link rel="stylesheet" href="./slick/slick.css">
     <!--Yandex map sendbox-->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2640f456-537d-4813-9aa9-a6cf13a7dd91"
-        type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2640f456-537d-4813-9aa9-a6cf13a7dd91"></script>
 
-    <!-- Yandex Metrika -->
+<!-- Yandex Metrika -->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -44,7 +35,7 @@
             trackHash: true
         });
     </script> <noscript>
-        <div><img src="https://mc.yandex.ru/watch/61610518" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img src="https://mc.yandex.ru/watch/61610518" style="position:absolute; left:-9999px;" alt="scr" /></div>
     </noscript> 
     <!-- /Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -63,7 +54,7 @@
             webvisor: true
         });
     </script> <noscript>
-        <div><img src="https://mc.yandex.ru/watch/61598311" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img src="https://mc.yandex.ru/watch/61598311" style="position:absolute; left:-9999px;" alt="scr" /></div>
     </noscript> 
     <!-- /Yandex.Metrika counter -->
 
@@ -76,16 +67,14 @@
 
         gtag('config', 'UA-162702101-1');
     </script>
-
 </head>
 
 <body>
-
     <a href="#menu" class="menu-mobile">
         <span></span>
     </a>
-
     <section class="menu">
+        <h2 class="menu_title">Меню</h2>
         <div class="menu-list">
             <ul>
                 <li><a href="#main">О Компании</a></li>
@@ -199,12 +188,11 @@
                     <div class="popup-form-header">
                         Получите индивидуальное предложение<br>
                         <span>на производство и поставку изделий</span>
-                        <label for="phone" class="popup-form__label">
+                        <label for="tel" class="popup-form__label">
                             Введите ваш номер телефона:
                         </label>
-                        <input type="phone" name="user_phone" class="popup-form__input" required>
-                        <button <input type="button" onclick="ym(61610518, 'reachGoal', 'pushTheBtn'); return true;"
-                            class="button popup-form_btn">
+                        <input id="tel" type="tel" name="user_phone" class="popup-form__input" required>
+                        <button onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;" class="button popup-form_btn">
                             Оставить заявку!
                         </button>
                         <div class="popup-form__note">
@@ -221,10 +209,10 @@
     <!-- /.overlay -->
 
     <section class="features" id="features">
+        <h2 class="menu_title">Фичи</h2>
         <div class="container">
             <!-- СТРОЧНО БЛОЧНЫЙ СПОСОБ-->
             <div class="numbers wow slideInUp">
-
                 <div class="numbers-block">
                     <div class="numbers-block__title">
                         5 лет
@@ -397,7 +385,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-1.png" alt="#">
+                        <img class="products-block__img" src="./img/products/img-1.png" alt="Гофрокороб">
                         <div class="products-block__title">
                             Гофрокороб 4-х клапанный
                         </div>
@@ -415,7 +403,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-2.png" alt="#">
+                        <img class="products-block__img" src="./img/products/img-2.png" alt="Гофролоток">
                         <div class="products-block__title">
                             Гофролоток
                         </div>
@@ -437,7 +425,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-3.png" alt="#">
+                        <img class="products-block__img" src="./img/products/img-3.png" alt="Гофрокороб2">
                         <div class="products-block__title">
                             Гофрокороб самосборный (сложная высечка)
                         </div>
@@ -455,7 +443,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-4.png" alt="#">
+                        <img class="products-block__img" src="./img/products/img-4.png" alt="Листовой">
                         <div class="products-block__title">
                             Листовой гофрокартон
                         </div>
@@ -486,7 +474,7 @@
             <!-- /.offer-title -->
             <div class="offer-form">
                 <form action="mailer/telegram.php" method="POST" class="form">
-                    <label class="offer-form__label" for="">Введите ваш номер телефона:</label>
+                    <label class="offer-form__label" for="tel">Введите ваш номер телефона:</label>
                     <input class="form__input offer-form__input" type="tel" name="user_phone"
                         placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
                     <button onclick="ym(61610518, 'reachGoal', 'mainMenuSendPhone'); return true;"
@@ -506,18 +494,18 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 d1">
                     <div class="production-slider_top">
-                        <img src="./img/production/img-1.png" alt="#">
-                        <img src="./img/production/img-3.jpg" alt="#">
-                        <img src="./img/production/img-4.jpg" alt="#">
-                        <img src="./img/production/img-5.jpg" alt="#">
-                        <img src="./img/production/img-6.jpg" alt="#">
+                        <img src="./img/production/img-1.png" alt="page1">
+                        <img src="./img/production/img-3.jpg" alt="page2">
+                        <img src="./img/production/img-4.jpg" alt="page3">
+                        <img src="./img/production/img-5.jpg" alt="page4">
+                        <img src="./img/production/img-6.jpg" alt="page5">
                     </div>
                     <div class="production-slider_bottom">
-                        <img src="./img/production/img-1.png" alt="#">
-                        <img src="./img/production/img-3.jpg" alt="#">
-                        <img src="./img/production/img-4.jpg" alt="#">
-                        <img src="./img/production/img-5.jpg" alt="#">
-                        <img src="./img/production/img-6.jpg" alt="#">
+                        <img src="./img/production/img-1.png" alt="page6">
+                        <img src="./img/production/img-3.jpg" alt="page7">
+                        <img src="./img/production/img-4.jpg" alt="page8">
+                        <img src="./img/production/img-5.jpg" alt="page9">
+                        <img src="./img/production/img-6.jpg" alt="page10">
                     </div>
                     <!-- /.production-slider -->
                 </div>
@@ -556,51 +544,51 @@
             <!-- /.section-title -->
             <div class="clients-blocks">
                 <div class="clients-block">
-                    <img src="./img/clients/img-1.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-1.png" alt="img-1" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-2.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-2.png" alt="img-2" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-3.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-3.png" alt="img-3" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-4.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-4.png" alt="img-4" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-5.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-5.png" alt="img-5" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-6.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-6.png" alt="img-6" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-7.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-7.png" alt="img-7" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-8.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-8.png" alt="img-8" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-9.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-9.png" alt="img-9" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-10.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-10.png" alt="img-10" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-11.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-11.png" alt="img-11" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-12.png" alt="#" class="clients-block__img">
+                    <img src="./img/clients/img-12.png" alt="img-12" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
             </div>
@@ -616,22 +604,22 @@
             <!-- /.section-title -->
             <div class="feedback-slider">
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-1.jpg" alt="#">
+                    <img src="./img/feedback/img-1.jpg" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-2.jpg" alt="#">
+                    <img src="./img/feedback/img-2.jpg" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-3.jpg" alt="#">
+                    <img src="./img/feedback/img-3.jpg" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-4.png" alt="#">
+                    <img src="./img/feedback/img-4.png" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-5.jpg" alt="#">
+                    <img src="./img/feedback/img-5.jpg" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-6.jpg" alt="#">
+                    <img src="./img/feedback/img-6.jpg" alt="slider__img">
                 </div>
             </div>
             <!-- /.feedback-slider -->
@@ -641,6 +629,7 @@
     <!-- /.feedback -->
 
     <section class="contacts" id="contacts">
+        <h2 class="menu_title">Контакты</h2>
         <!-- yandex maps-->
         <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f16c7e67e7be86eb498039025c5d592f7b86dcb9267c354dd7a2dd47e896dba&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=false"></script> -->
         <!-- google maps-->
@@ -677,6 +666,7 @@
     <!-- /.contacts -->
 
     <section class="footer">
+        <h2 class="menu_title">Подвал</h2>
         <div class="footer-block">
             <div class="footer-block__text">
                 © www.gofra-ural.ru 2016, все права защищены
@@ -693,7 +683,11 @@
             <input type="tel" name="user_phone" placeholder="Введите телефон">
             <button class="button">Отправить</button>
         </form> -->
-
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
@@ -752,10 +746,7 @@
                 data: $(this).serialize()
             }).done(function () {
                 $(this).find("input").val("");
-
-                alert("Сообщение успешно отправлено");
-
-                $("form").trigger("reset");
+                $(".form").trigger("reset");
             });
             return false;
         });
