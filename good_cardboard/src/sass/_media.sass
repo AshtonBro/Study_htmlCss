@@ -176,7 +176,7 @@
             padding: 10px
             &__title
                 font-size: 12px
-                margin-bottom: 3px
+                margin-bottom: 1px
                 margin-top: 3px
                 margin-right: 17px
             &__text
@@ -194,6 +194,44 @@
     .map
         width: 100%
         height: 480px
+
+    .feedback
+        &-slider
+            padding-top: 15px
+            &__item
+                img
+                    height: 340px
+                    min-width: 230px
+
+    .production
+        &-slider
+            &_top
+                height: 250px
+                img
+                    height: 250px
+            &_bottom
+                height: 60px
+        &-text
+            padding-bottom: 28px
+            min-width: 0px;
+            &__title
+                margin: 0
+                width: 100%
+                padding: 12px
+                font-size: 24px
+            &__descr
+                font-size: 16px
+                line-height: 20px
+            
+    .row
+        display: flex
+        flex-flow: wrap
+    .set1
+        padding: 0
+        order: 1
+    .set2
+        padding: 0
+        order: 0
 
 
 @media (min-width: 576px) and (max-width: 767.98px)
@@ -372,6 +410,51 @@
         width: 100%
         height: 480px
 
+    .feedback
+        &-slider
+            &__item
+                img
+                    height: 340px
+                    min-width: 220px
+
+    .production
+        &-slider
+            &_top
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 25px
+                height: 335px
+                img
+                    height: 335px
+            &_bottom
+                height: 68px
+                margin-left: auto
+                margin-right: auto
+        &-text
+            margin-bottom: 20px
+            &__title
+                padding: 12px
+                margin-left: auto
+                margin-right: auto
+                width: 100%
+                text-align: center
+                font-size: 26px
+            &__descr
+                padding: 0 10px
+                font-size: 18px
+                line-height: 20px
+                text-align: center
+            
+    .row
+        display: flex
+        flex-flow: wrap
+    .set1
+        padding: 0
+        order: 1
+    .set2
+        padding: 0
+        order: 0
+
 @media (min-width: 767.98px) and (max-width: 992px)
     .header
         padding: 15px
@@ -541,6 +624,42 @@
         width: 100%
         height: 480px
 
+    .production
+        &-slider
+            &_top
+                margin-left: auto
+                margin-right: auto
+                height: 335px
+            &_bottom
+                height: 68px
+                margin-left: auto
+                margin-right: auto
+        &-text
+            margin-bottom: 20px
+            &__title
+                padding: 12px
+                margin-left: auto
+                margin-right: auto
+                width: 100%
+                text-align: center
+                font-size: 26px
+            &__descr
+                padding: 0 10px
+                font-size: 18px
+                line-height: 20px
+                text-align: center
+            
+    .row
+        display: flex
+        flex-flow: wrap
+    .set1
+        padding: 0
+        order: 1
+    .set2
+        padding: 0
+        order: 0
+
+
 @media (min-width: 992px) and (max-width: 1200px)
     .header
         &-contacts
@@ -605,3 +724,20 @@
                 margin-right: 15px
             &_right
                 margin-left: 15px
+
+    .production
+        &-slider
+            &_top
+                height: 335px
+            &_bottom
+                height: 68px
+        &-text
+            &__title
+                margin-left: -11%
+                padding-left: 14%
+                width: 108%
+            &__descr
+            font-size: 15px
+            line-height: 24px
+            padding-left: 10px
+
