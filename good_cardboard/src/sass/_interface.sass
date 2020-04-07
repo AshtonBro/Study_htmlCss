@@ -62,6 +62,23 @@ img
             &:hover
                 background: $active-color url(../img/arrow-right_active.png) center no-repeat
 
+.feedback
+    &-arrow
+        position: absolute
+        top: 0
+        z-index: 7
+        height: 100%
+        width: 22px
+        &:hover
+            cursor: pointer
+        &_left
+            left: 0
+            background: $bg-color-light url(../img/feedback-left.png) center no-repeat
+        &_right
+            right: 0
+            transform: rotate(180deg)
+            background: $bg-color-light url(../img/feedback-left.png) center no-repeat
+
 .dark-bg
     position: relative
     z-index: 2

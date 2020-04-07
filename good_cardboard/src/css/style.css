@@ -190,7 +190,7 @@ body {
 .main {
   padding-top: 65px;
   padding-bottom: 60px;
-  background: #373737 url(../img/main/header-background.jpg) center no-repeat;
+  background: #373737 url(../img/main/header-background.webp) center no-repeat;
   background-size: cover;
   color: #fff; }
   .main-img {
@@ -236,8 +236,7 @@ body {
     line-height: 30px; }
     .form-title__uppertext {
       font-weight: 700;
-      text-transform: uppercase;
-      display: block; }
+      text-transform: uppercase; }
   .form__input {
     margin-right: 10px;
     font-size: 14px;
@@ -322,6 +321,23 @@ img {
     background: #fff url(../img/arrow-right.png) center no-repeat; }
     .slider-arrow_right:hover {
       background: #ff9d00 url(../img/arrow-right_active.png) center no-repeat; }
+
+.feedback-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 7;
+  height: 100%;
+  width: 22px; }
+  .feedback-arrow:hover {
+    cursor: pointer; }
+  .feedback-arrow_left {
+    left: 0;
+    background: #f4f4f4 url(../img/feedback-left.png) center no-repeat; }
+  .feedback-arrow_right {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: #f4f4f4 url(../img/feedback-left.png) center no-repeat; }
 
 .dark-bg {
   position: relative;
@@ -563,6 +579,60 @@ img {
       margin-left: auto;
       margin-right: auto; }
 
+.feedback {
+  padding-top: 55px;
+  padding-bottom: 66px;
+  background: #f4f4f4; }
+  .feedback-slider__item {
+    padding-left: 35px;
+    padding-right: 35px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto; }
+    .feedback-slider__item img {
+      margin: 0 7px;
+      outline: none;
+      height: 411px;
+      min-width: 283px;
+      margin-left: auto;
+      margin-right: auto; }
+
+.offer {
+  padding-top: 64px;
+  padding-bottom: 69px;
+  color: #fff;
+  background: grey url(../img/offer/offer-bg.webp) center no-repeat;
+  background-size: cover;
+  text-align: center; }
+  .offer-title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px; }
+    .offer-title_small {
+      font-size: 26px;
+      display: block;
+      margin-bottom: 15px; }
+  .offer-form__label {
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-weight: 300;
+    display: block; }
+  .offer-form__input {
+    display: block;
+    margin: auto;
+    margin-bottom: 12px; }
+  .offer-form__button {
+    margin-bottom: 9px; }
+
+.d1 {
+  padding-right: 0;
+  padding-left: 15px; }
+
+.d2 {
+  padding-right: 0;
+  padding-right: 15px; }
+
 .production {
   padding-top: 87px;
   padding-bottom: 90px; }
@@ -576,15 +646,16 @@ img {
       padding-top: 17.5px;
       padding-bottom: 17.5px;
       margin-bottom: 29px;
-      margin-left: -4%;
+      margin-left: -7%;
       padding-left: 10%;
-      width: 105%;
+      width: 106%;
       z-index: -1; }
     .production-text__descr {
       font-size: 16px;
       font-weight: 300;
       line-height: 24px;
-      padding-left: 30px;
+      padding-left: 20px;
+      padding-right: 7px;
       text-align: justify; }
   .production-slider {
     position: relative;
@@ -607,51 +678,6 @@ img {
       .production-slider_bottom img {
         margin: 0 6px;
         outline: none; }
-
-.d1 {
-  padding: 0;
-  padding-left: 15px; }
-
-.d2 {
-  padding: 0;
-  padding-right: 15px; }
-
-.feedback {
-  padding-top: 55px;
-  padding-bottom: 66px;
-  background: #f4f4f4; }
-  .feedback img {
-    max-height: 374px;
-    max-width: 274px;
-    margin: 0 auto; }
-
-.offer {
-  padding-top: 64px;
-  padding-bottom: 69px;
-  color: #fff;
-  background: grey url(../img/offer/offer-bg.png) center no-repeat;
-  background-size: cover;
-  text-align: center; }
-  .offer-title {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 15px; }
-    .offer-title_small {
-      font-size: 26px;
-      display: block;
-      margin-bottom: 15px; }
-  .offer-form__label {
-    display: block;
-    margin-bottom: 17px;
-    font-size: 20px;
-    font-weight: 300; }
-  .offer-form__input {
-    display: block;
-    margin: auto;
-    margin-bottom: 12px; }
-  .offer-form__button {
-    margin-bottom: 9px; }
 
 .contacts {
   position: relative; }
