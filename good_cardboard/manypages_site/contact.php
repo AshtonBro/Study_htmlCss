@@ -39,36 +39,10 @@
         <!-- Loader -->
     	<div class="loader">
     		<div class="loader-img"></div>
-    	</div>
+		</div>
 		
-		<!-- Top menu -->
-		<nav class="navbar navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Lancar - Bootstrap One-Page Portfolio Template</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="top-navbar-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a class="scroll-link" href="index.html">Top</a></li>
-						<li><a class="scroll-link" href="#what-we-do">Services</a></li>
-						<li><a class="scroll-link" href="#portfolio">Portfolio</a></li>
-						<li><a class="scroll-link" href="#pricing-2">Prices</a></li>
-						<li><a class="scroll-link" href="#about">About</a></li>
-						<li><a class="scroll-link" href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<?php include('nav.php'); ?>
 
-    
-    
     <!-- Contact us (block 2) -->
         <div class="block-2-container section-container contact-container">
 	        <div class="container">
@@ -111,32 +85,31 @@
             		<span aria-hidden="true" class="icon_mail"></span>
             	</div>
 	        </div>
+		</div>
+		
+        <!-- Call to action -->
+        <div class="call-to-action-container section-container section-container-full-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
+	                    <p>
+	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+	                    	labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-bottom-link wow fadeInUp">
+                        	<a class="big-link-1 btn scroll-link" href="#contact">Contact us now!</a>
+                        </div>
+                    </div>
+                </div>
+	        </div>
         </div>
 
         <!-- Footer -->
-        <footer>
-	        <div class="container">
-	        	<div class="row">
-		        	<div class="col-sm-12">
-		        		<div class="scroll-to-top">
-		        			<a href="#"><i class="fa fa-chevron-up"></i></a>
-		        		</div>
-		        	</div>
-		        </div>
-	            <div class="row">
-                    <div class="col-sm-7 footer-copyright">
-                    	&copy; Lancar Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
-                    </div>
-                    <div class="col-sm-5 footer-social">
-                    	<a href="#"><i class="fa fa-facebook"></i></a>
-	                	<a href="#"><i class="fa fa-dribbble"></i></a>
-	                    <a href="#"><i class="fa fa-twitter"></i></a>
-	                    <a href="#"><i class="fa fa-google-plus"></i></a>
-	                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                    </div>
-	            </div>
-	        </div>
-        </footer>
+		<?php include('footer.php'); ?>
         
 
         <!-- Javascript -->
