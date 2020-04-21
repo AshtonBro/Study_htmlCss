@@ -9,8 +9,15 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./fotorama-4.6.4/fotorama.css"> -->
-    <link rel="stylesheet" href="./slick/slick-theme.css">
-    <link rel="stylesheet" href="./slick/slick.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/animate.css"> -->
+
+    <?php wp_head(); ?>
+    
+    <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap-grid.min.css"> -->
+    <!-- <link rel="stylesheet" href="./slick/slick-theme.css"> -->
+    <!-- <link rel="stylesheet" href="./slick/slick.css"> -->
 </head>
 
 <body>
@@ -70,7 +77,7 @@
                         </div>
                         <button onclick="ym(61598311, 'reachGoal', 'topBtn'); return true;"
                             class="header-contacts__button button popup__button">
-                            <img src="./img/header/icon-phone.png" alt="phone">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/header/icon-phone.png" alt="phone">
                             <span class="hidden-mobile">Заказать звонок</span>
                         </button>
                     </div>
@@ -88,7 +95,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                     <div class="main-img animate hidden-mobile">
-                        <img src="./img/main/boxes.png" alt="boxes">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/main/boxes.png" alt="boxes">
                     </div>
                     <!-- /.main-img -->
                 </div>
@@ -96,7 +103,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                     <div class="main-text wow zoomInUp">
                         <h1 class="main-text__title">
-                            Производство упаковки из гофрокартона
+                            <?php the_field('main-title') ?>
                         </h1>
                         <!-- /.main-text__title -->
                         <div class="main-text__subtitle">
@@ -212,7 +219,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-delay='0.1s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-1.png" alt="Производство">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-1.png" alt="Производство">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -231,7 +238,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-delay='0.2s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-2.png" alt="Бесплатные образцы">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-2.png" alt="Бесплатные образцы">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -250,7 +257,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-delay='0.3s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-3.png" alt="Стабильное качество">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-3.png" alt="Стабильное качество">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -269,7 +276,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-4.png" alt="Страховой запас">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-4.png" alt="Страховой запас">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -288,7 +295,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-5.png" alt="Флексопечать">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-5.png" alt="Флексопечать">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -307,7 +314,7 @@
 
                 <div class="features-block wow fadeInUp" data-wow-duration='2s'>
                     <div class="features-block__img">
-                        <img src="./img/features/icon-6.png" alt="Гидрофобные добавки">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/features/icon-6.png" alt="Гидрофобные добавки">
                     </div>
                     <!-- /.features-block__img -->
                     <div class="features-block__text">
@@ -340,7 +347,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-1.webp" alt="Гофрокороб">
+                        <img class="products-block__img" src="<?php echo get_template_directory_uri(); ?>/img/products/img-1.webp" alt="Гофрокороб">
                         <div class="products-block__title">
                             Гофрокороб 4-х клапанный
                         </div>
@@ -358,7 +365,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-2.webp" alt="Гофролоток">
+                        <img class="products-block__img" src="<?php echo get_template_directory_uri(); ?>/img/products/img-2.webp" alt="Гофролоток">
                         <div class="products-block__title">
                             Гофролоток
                         </div>
@@ -380,7 +387,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-3.webp" alt="Гофрокороб2">
+                        <img class="products-block__img" src="<?php echo get_template_directory_uri(); ?>/img/products/img-3.webp" alt="Гофрокороб2">
                         <div class="products-block__title">
                             Гофрокороб самосборный (сложная высечка)
                         </div>
@@ -398,7 +405,7 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="products-block">
-                        <img class="products-block__img" src="./img/products/img-4.webp" alt="Листовой">
+                        <img class="products-block__img" src="<?php echo get_template_directory_uri(); ?>/img/products/img-4.webp" alt="Листовой">
                         <div class="products-block__title">
                             Листовой гофрокартон
                         </div>
@@ -449,18 +456,18 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 set1">
                     <div class="production-slider_top">
-                        <img src="./img/production/img-1.webp" alt="page1">
-                        <img src="./img/production/img-2.webp" alt="page2">
-                        <img src="./img/production/img-3.webp" alt="page3">
-                        <img src="./img/production/img-4.webp" alt="page4">
-                        <img src="./img/production/img-5.webp" alt="page5">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-1.webp" alt="page1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-2.webp" alt="page2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-3.webp" alt="page3">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-4.webp" alt="page4">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-5.webp" alt="page5">
                     </div>
                     <div class="production-slider_bottom">
-                        <img src="./img/production/img-1.webp" alt="page6">
-                        <img src="./img/production/img-2.webp" alt="page7">
-                        <img src="./img/production/img-3.webp" alt="page8">
-                        <img src="./img/production/img-4.webp" alt="page9">
-                        <img src="./img/production/img-5.webp" alt="page10">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-1.webp" alt="page6">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-2.webp" alt="page7">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-3.webp" alt="page8">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-4.webp" alt="page9">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/production/img-5.webp" alt="page10">
                     </div>
                     <!-- /.production-slider -->
                 </div>
@@ -498,51 +505,51 @@
             <!-- /.section-title -->
             <div class="clients-blocks">
                 <div class="clients-block">
-                    <img src="./img/clients/img-1.png" alt="img-1" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-1.png" alt="img-1" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-2.png" alt="img-2" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-2.png" alt="img-2" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-3.png" alt="img-3" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-3.png" alt="img-3" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-4.png" alt="img-4" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-4.png" alt="img-4" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-5.png" alt="img-5" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-5.png" alt="img-5" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-6.png" alt="img-6" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-6.png" alt="img-6" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-7.png" alt="img-7" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-7.png" alt="img-7" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-8.png" alt="img-8" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-8.png" alt="img-8" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-9.png" alt="img-9" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-9.png" alt="img-9" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-10.png" alt="img-10" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-10.png" alt="img-10" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-11.png" alt="img-11" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-11.png" alt="img-11" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
                 <div class="clients-block">
-                    <img src="./img/clients/img-12.png" alt="img-12" class="clients-block__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/clients/img-12.png" alt="img-12" class="clients-block__img">
                 </div>
                 <!-- /.client-block -->
             </div>
@@ -558,19 +565,19 @@
             <!-- /.section-title -->
             <div class="feedback-slider">
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-1.webp" alt="slider__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/feedback/img-1.webp" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-2.webp" alt="slider__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/feedback/img-2.webp" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-3.webp" alt="slider__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/feedback/img-3.webp" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-4.webp" alt="slider__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/feedback/img-4.webp" alt="slider__img">
                 </div>
                 <div class="feedback-slider__item">
-                    <img src="./img/feedback/img-5.webp" alt="slider__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/feedback/img-5.webp" alt="slider__img">
                 </div>
             </div>
             <!-- /.feedback-slider -->
@@ -590,14 +597,14 @@
         </div>
         <div class="contacts-block">
             <div class="contacts-block__address contacts-block__text">
-                <img src="./img/contacts/maps.svg" alt="maps" class="contacts-block__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/contacts/maps.svg" alt="maps" class="contacts-block__img">
                 <span class="contacts-block__title">Адрес офиса</span>
                 г. Уфа, Проспект октября, 46
                 <span class="contacts-block__title">Адрес склада</span>
                 г. Уфа, ул. Майкопская, 65/2
             </div>
             <div class="contacts-block__phone contacts-block__text">
-                <img src="./img/contacts/smartphone.svg" alt="phone" class="contacts-block__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/contacts/smartphone.svg" alt="phone" class="contacts-block__img">
                 <span class="contacts-block__title">Тел. отдела продаж:</span>
                 8 (347) 271-54-28<br>
                 8 (937) 363-30-00
@@ -606,7 +613,7 @@
                 <button class="button contacts-block__button popup__button">Заказать звонок</button>
             </div>
             <div class="contacts-block__email contacts-block__text">
-                <img src="./img/contacts/email.svg" alt="email" class="contacts-block__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/contacts/email.svg" alt="email" class="contacts-block__img">
                 <span class="contacts-block__title">Е-mail</span>
                 urals.karton@gmail.com
             </div>
@@ -635,18 +642,15 @@
             <button class="button">Отправить</button>
         </form> -->
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
-    <link rel="stylesheet" href="./css/animate.css">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
     <!-- jQuery-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
 
-    <script>
+    <!-- <script>
         window.jQuery || document.write('<script src="./js/jquery-2.2.4.min.js"><\/script>')
-    </script>
+    </script> -->
 
-    <script src="./js/jquery.maskedinput.js"></script>
+    <!-- <script src="./js/jquery.maskedinput.js"></script> -->
 
     <script>
         $(document).ready(function () {
@@ -688,123 +692,8 @@
     </script>
 
     <!-- <script src="./fotorama-4.6.4/fotorama.js"></script> -->
-    <script src="./slick/slick.min.js"></script>
-    <script src="./js/wow.min.js"></script>
-
-    <script>
-        $('.production-slider_top').slick({
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            asNavFor: '.production-slider_bottom'
-        });
-        $('.production-slider_bottom').slick({
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            prevArrow: '<div class="slider-arrow slider-arrow_prod slider-arrow_left"></div>',
-            nextArrow: '<div class="slider-arrow slider-arrow_prod slider-arrow_right"></div>',
-            asNavFor: '.production-slider_top',
-            responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 320,
-                    settings: {
-                        arrows: true,
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
-                }
-            ]
-        });
-
-        $('.feedback-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            prevArrow: '<div class="feedback-arrow feedback-arrow_left"></div>',
-            nextArrow: '<div class="feedback-arrow feedback-arrow_right"></div>',
-            responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        centerPadding: '60px',
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        centerPadding: '40px',
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        centerPadding: '40px',
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        centerPadding: '30px',
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 320,
-                    settings: {
-                        centerPadding: '30px',
-                        arrows: false,
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-            ]
-        });
-    </script>
-
-    <script>
-        new WOW().init();
-    </script>
+    <!-- <script src="./slick/slick.min.js"></script>
+    <script src="./js/wow.min.js"></script> -->
 
     <script>
         $(document).ready(function () {
@@ -812,7 +701,6 @@
             let menuLinkActive = $('.menu-mobile_active')
             let menu = $('.menu')
             let navLink = $('.menu a');
-
 
             menuLink.click(function () {
                 menuLink.toggleClass('menu-mobile_active')
@@ -825,41 +713,7 @@
         });
     </script>
 
-    <script>
-        ymaps.ready(function () {
-            let myMap = new ymaps.Map('map', {
-                    center: [54.752656, 56.002053],
-                    zoom: 13,
-                }, {
-                    searchControlProvider: 'yandex#search'
-                }),
-
-                // Создаём макет содержимого.
-                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent];</div>'
-                ),
-
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                    hintContent: 'Собственный значок метки',
-                    balloonContent: 'Это красивая метка'
-                }, {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#image',
-                    // Своё изображение иконки метки.
-                    iconImageHref: 'img/header/header-logo-mobile.png',
-                    // Размеры метки.
-                    iconImageSize: [41, 41],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-5, -38]
-                });
-
-            myMap.geoObjects
-                .add(myPlacemark);
-            myMap.behaviors.disable('scrollZoom');
-        });
-    </script>
+<?php wp_footer(); ?>
 
 </body>
 
