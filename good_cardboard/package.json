@@ -10,13 +10,21 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "grunt-webfont": "^1.7.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-font": "^1.0.4",
+    "gulp-fontgen": "^0.2.5",
+    "gulp-inline-fonts": "^1.2.1",
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
+    "batik": "^0.1.2-alpha",
+    "fontforge": "0.0.4",
     "gulp-util": "^3.0.8",
+    "install": "^0.13.0",
     "jquery": "^3.4.1",
+    "ttf2eot": "^2.0.0",
     "vinyl-ftp": "^0.6.1"
   }
 }

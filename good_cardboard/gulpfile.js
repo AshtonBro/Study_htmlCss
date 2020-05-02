@@ -4,6 +4,9 @@ const sass = require('gulp-sass');
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 const autoprefixer = require('gulp-autoprefixer');
+//var fontgen = require('gulp-fontgen');
+//var ttf2woff = require('gulp-ttf2woff');
+
 
 // Запускаем сервер, предварительно скопилировав SASS
 gulp.task('serve', ['sass'], () => {
@@ -27,6 +30,14 @@ gulp.task('sass', () => {
         .pipe(gulp.dest("src/css"))
         .pipe(bs.stream());
 });
+
+// Конвертируем шрифты
+// gulp.task('fontgen', () => {
+//     return gulp.src('/src/fonts/*.{ttf,otf}')
+//         .pipe(fontgen({dest: '/src/fonts/'}))
+//         .pipe(gulp.dest('/src/fonts/'));
+// });
+
 
 gulp.task('default', ['serve']);
 
