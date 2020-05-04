@@ -7,7 +7,8 @@ body {
   font-family: 'Gotha Pro Reg'; }
 
 header {
-  padding-top: 54px; }
+  padding-top: 54px;
+  margin-bottom: 122px; }
 
 .header-logo {
   display: -webkit-box;
@@ -64,3 +65,73 @@ header {
     line-height: 22px;
     border: none;
     border-bottom: 1px solid #ff3469; }
+
+.main-text {
+  text-align: center; }
+  .main-text__title, .main-text .title {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.34px;
+    padding-bottom: 33px; }
+  .main-text__subtitle, .main-text .subtitle {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "Gotham Pro Light";
+    letter-spacing: 0.18px;
+    padding-bottom: 70px; }
+    .main-text__subtitle span, .main-text .subtitle span {
+      font-family: "Gotham Pro Medium";
+      font-weight: 500;
+      letter-spacing: 0.18px; }
+
+.main-slider-block {
+  padding-bottom: 67px;
+  position: relative; }
+  .main-slider-block__img {
+    z-index: 0; }
+  .main-slider-block img {
+    padding-top: 25px; }
+  .main-slider-block::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin-left: 40px;
+    margin-top: 58px;
+    -webkit-box-shadow: 0 0 35px 10px #ffffff;
+    box-shadow: 0 0 35px 10px #ffffff;
+    z-index: -1; }
+
+.main-order {
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #4c4c4c; }
+  .main-order__text {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.19px;
+    padding-bottom: 36px; }
+    .main-order__text span {
+      font-family: "Gotham Pro Medium";
+      font-weight: 500;
+      letter-spacing: 0.19px; }
+  .main-order__button {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18px;
+    border: 3px solid #ff2e55;
+    background-color: #ff2e55;
+    padding: 27px 62px 23px 62px;
+    margin-bottom: 77px; }
+    .main-order__button:hover {
+      background-color: #ff1844; }
