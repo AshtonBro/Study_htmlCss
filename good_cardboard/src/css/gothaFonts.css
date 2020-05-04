@@ -1,12 +1,29 @@
 @font-face {
-	font-family: Gotha Pro lig;
-	src: url("../fonts//GothaProLig.otf") format("opentype");
+	font-family: "Gotha Pro lig";
+	src: url("../fonts/GothaProLig.otf") format("opentype");
 }
+
 @font-face {
-	font-family: Gotha Pro Med;
+	font-family: "Gotha Pro Med";
 	src: url("../fonts/GothaProMed.otf") format("opentype");
 }
+
 @font-face {
-	font-family: Gotha Pro Reg;
+	font-family: "Gotha Pro Reg";
 	src: url("../fonts/GothaProReg.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Pro";
+	src: url("../fonts/GothamPro.woff") format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Pro Light";
+	src: url("../fonts/GothamPro-Light.woff") format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Pro Medium";
+	src: url("../fonts/GothamPro-Medium.woff") format("opentype");
 }

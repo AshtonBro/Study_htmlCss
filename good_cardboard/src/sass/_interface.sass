@@ -1,22 +1,39 @@
-// .slider
-    &-arrow
+.main-slider
+    margin: auto auto
+
+.main-slider-block 
+    padding-bottom: 67px
+    position: relative
+    &__img
+        z-index: 0
+    img
+        padding-top: 25px
+        margin-left: 26%
+    &::before
+        content: ''
         position: absolute
-        top: 0
-        z-index: 7
-        height: 100%
-        width: 22px
-        border: 1px solid $active-color
-        &_prod
-            border: 1px solid $active-color
+        width: 8px
+        height: 8px
+        margin-left: 78px
+        margin-top: 58px
+        box-shadow: 0 0 35px 10px #ffffff
+        z-index: -1
+
+.slider-arrow
+    position: absolute
+    top: 0
+    height: 75%
+    width: 13px
+    z-index: 7
+    &:hover
+        cursor: pointer
+    &_left
+        left: 0
+        background: url(../img/main/arrow-left.png) center no-repeat
         &:hover
-            cursor: pointer
-        &_left
-            left: 0
-            background: #fff url(../img/arrow-left.png) center no-repeat
-            &:hover
-                 background: $active-color url(../img/arrow-left_active.png) center no-repeat
-        &_right
-            right: 0
-            background: #fff url(../img/arrow-right.png) center no-repeat
-            &:hover
-                background: $active-color url(../img/arrow-right_active.png) center no-repeat
+            background: url(../img/main/arrow-left_hover.png) center no-repeat
+    &_right
+        right: 0
+        background: url(../img/main/arrow-right.png) center no-repeat
+        &:hover
+            background: url(../img/main/arrow-right_hover.png) center no-repeat
