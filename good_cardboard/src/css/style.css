@@ -3,4 +3,64 @@
   box-sizing: border-box; }
 
 body {
+  background-color: #292929;
   font-family: 'Gotha Pro Reg'; }
+
+header {
+  padding-top: 54px; }
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  padding: 0; }
+  .header-logo__img {
+    background: url(../img/header/logo.png) center no-repeat;
+    background-size: 100%;
+    width: 156px;
+    height: 40px;
+    margin-right: 42px; }
+  .header-logo__desc {
+    color: #fdfdfd91;
+    font-family: "Gotha Pro lig";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.12px;
+    line-height: 14px;
+    vertical-align: middle; }
+    .header-logo__desc span {
+      color: #ff3469;
+      font-family: "Gotha Pro Med";
+      font-weight: 500; }
+
+.header-contacts {
+  text-align: right;
+  padding: 0; }
+  .header-contacts::after {
+    position: absolute;
+    content: url(../img/header/lip.png);
+    margin-top: -17%;
+    margin-left: -55%; }
+  .header-contacts__phone {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin-bottom: 6px; }
+  .header-contacts__desc {
+    color: #ffffff;
+    margin-bottom: 11px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12px; }
+  .header-contacts__button {
+    background-color: transparent;
+    color: #ff3469;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    line-height: 22px;
+    border: none;
+    border-bottom: 1px solid #ff3469; }
