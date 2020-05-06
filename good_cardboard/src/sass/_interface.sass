@@ -37,3 +37,20 @@
         background: url(../img/main/arrow-right.png) center no-repeat
         &:hover
             background: url(../img/main/arrow-right_hover.png) center no-repeat
+
+.dark-bg
+    position: relative
+    z-index: 2
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.6)
+        z-index: -1
+
+.is-open
+    display: block

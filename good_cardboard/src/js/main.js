@@ -1,4 +1,5 @@
 'use strict';
+// * Slider Slick jQuery path of code
 $(document).ready(function () {
     $('.main-slider').slick({
         arrows: true,
@@ -52,3 +53,20 @@ $(document).ready(function () {
         ]
     });
 });
+
+// * Work with the site on JavaScript
+const sliderImg = document.querySelectorAll('.main-slider-block__img'),
+    overlay = document.querySelector('.overlay'),
+    btnClose = document.querySelector('.popup-close');
+
+const toggleFunc = () => {
+    overlay.classList.toggle('is-open');
+};
+
+
+// * Event listeners
+sliderImg.forEach(element => {
+    element.addEventListener('click', toggleFunc);
+});
+
+btnClose.addEventListener('click', toggleFunc);

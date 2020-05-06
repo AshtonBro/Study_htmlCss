@@ -1,0 +1,64 @@
+.overlay
+    position: fixed
+    display: none
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 20
+    background-color: rgba(0,0,0,.4)
+
+.popup
+    position: fixed
+    top: 301px
+    left: 50%
+    width: 516px
+    height: 306px
+    background-color: #f8f6f0
+    transform: translateX(-50%)
+    &::after
+        position: absolute
+        content: url(../img/popup/rose.png)
+        top: 0%
+        right: 0%
+    &::before
+        position: absolute
+        content: url(../img/popup/rose-2.png)
+        bottom: -1%
+    &-close
+        position: absolute
+        right: -40px
+        top: 5px
+        font-size: 35px
+        color: #fff
+        font-weight: 200
+        cursor: pointer
+        &::before
+            content: ''
+            position: absolute
+            z-index: -1
+            width: 40px
+            height: 40px
+            right: -9px
+            bottom: -2px
+            border: 1px solid #ffffff
+            border-radius: 50%
+    &-title
+        width: 100%
+        color: $text-color-modal
+        font-family: 'Gotham Pro'
+        padding-top: 57px
+        padding-left: 58px
+        margin-bottom: 29px
+        font-size: 24px
+        font-weight: 600
+        text-transform: uppercase
+        letter-spacing: 0.24px
+    &-descr
+        color: #1c1c1c
+        font-size: 16px
+        padding-left: 58px
+        padding-right: 58px
+        font-weight: 400
+        letter-spacing: 0.36px
+        text-align: left
+        line-height: 18px
