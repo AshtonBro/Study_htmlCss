@@ -61,7 +61,6 @@ const sliderImg = document.querySelectorAll('.main-slider-block__img'),
 // * Toggle function for add/remove class
 const toggleFunc = () => {
     overlay.classList.toggle('is-open');
-    findFlower();
 };
 
 // * local data base
@@ -151,7 +150,9 @@ const findFlower = () => {
 
 // * Event listeners
 sliderImg.forEach(element => {
+    element.addEventListener('click', findFlower);
     element.addEventListener('click', toggleFunc);
+
 });
 overlay.addEventListener('click', () => {
     const targer = event.target;
