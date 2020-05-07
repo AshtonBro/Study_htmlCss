@@ -9,7 +9,7 @@
         text-transform: uppercase
         letter-spacing: 0.3px
         padding-top: 99px
-        padding-bottom: 96px
+        padding-bottom: 94px
 
 .reviews-slider
     &__items
@@ -22,11 +22,13 @@
         align-items: center
         margin-left: 8%
         margin-right: auto
+        padding-bottom: 98px
 
 .reviews-slider
     &__descr
         width: 490px
         height: 124px
+        margin-left: 52px
     &__comment
         font-family: "Gotham Pro"
         color: $text-color
@@ -50,19 +52,21 @@
         font-size: 18px
         &:hover
             color: $btn-bg-color-active
-
+    &__img
+        position: relative
 .reviews-item
     &__name
         position: absolute
         text-align: center
         color: $text-color
-        margin-top: 7%
-        margin-left: 2%
+        width: 220px
+        top: 50%
+        transform: translate(0, -50%)
         font-size: 20px
         font-weight: 500
         font-family: "Gotham Pro Medium"
         letter-spacing: 0.2px
-        z-index: 5
+        z-index: 10
         &-city
             color: $text-color
             font-family: "Gotham Pro"
@@ -73,6 +77,23 @@
         height: 220px
         border-radius: 50%
         object-fit: cover
-        margin-right: 52px
         opacity: 0.6
 
+.advantages-blocks
+    display: flex
+    justify-content: space-between
+    align-items: center
+.advantages-block
+    align-items: center
+    text-align: center
+    width: 27%
+.advantages
+    &__img
+        margin-bottom: 30px
+    &__descr
+        color: $text-color
+        font-size: 20px
+        font-weight: 500
+        line-height: 25px
+        text-transform: uppercase
+        margin-bottom: 100px

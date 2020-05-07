@@ -131,14 +131,14 @@ body {
     cursor: pointer; }
   .slider-arrow-reviews_left {
     left: 0;
-    background: url(../img/reviews/arrow-left.png) center no-repeat; }
+    background: url(../img/reviews/arrow-left_active.png) center no-repeat; }
     .slider-arrow-reviews_left:hover {
-      background: url(../img/main/arrow-left_active.png) center no-repeat; }
+      background: url(../img/reviews/arrow-left.png) center no-repeat; }
   .slider-arrow-reviews_right {
     right: 0;
-    background: url(../img/reviews/arrow-right.png) center no-repeat; }
+    background: url(../img/reviews/arrow-right_active.png) center no-repeat; }
     .slider-arrow-reviews_right:hover {
-      background: url(../img/reviews/arrow-right_active.png) center no-repeat; }
+      background: url(../img/reviews/arrow-right.png) center no-repeat; }
 
 .dark-bg {
   position: relative;
@@ -304,7 +304,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.3px;
   padding-top: 99px;
-  padding-bottom: 96px; }
+  padding-bottom: 94px; }
 
 .reviews-slider__items {
   display: -webkit-box;
@@ -322,11 +322,13 @@ header {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 8%;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-bottom: 98px; }
 
 .reviews-slider__descr {
   width: 490px;
-  height: 124px; }
+  height: 124px;
+  margin-left: 52px; }
 
 .reviews-slider__comment {
   font-family: "Gotham Pro";
@@ -353,17 +355,22 @@ header {
   .reviews-slider__button:hover {
     color: #ff1844; }
 
+.reviews-slider__img {
+  position: relative; }
+
 .reviews-item__name {
   position: absolute;
   text-align: center;
   color: #ffffff;
-  margin-top: 7%;
-  margin-left: 2%;
+  width: 220px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   font-size: 20px;
   font-weight: 500;
   font-family: "Gotham Pro Medium";
   letter-spacing: 0.2px;
-  z-index: 5; }
+  z-index: 10; }
   .reviews-item__name-city {
     color: #ffffff;
     font-family: "Gotham Pro";
@@ -376,5 +383,33 @@ header {
   border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover;
-  margin-right: 52px;
   opacity: 0.6; }
+
+.advantages-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.advantages-block {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 27%; }
+
+.advantages__img {
+  margin-bottom: 30px; }
+
+.advantages__descr {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 100px; }
