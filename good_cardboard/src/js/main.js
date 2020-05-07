@@ -52,6 +52,13 @@ $(document).ready(function () {
             },
         ]
     });
+    $('.reviews-slider').slick({
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_left"></div>',
+        nextArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_right"></div>'
+    });
 });
 
 // * Work with the site on JavaScript
