@@ -413,3 +413,16 @@ header {
   line-height: 25px;
   text-transform: uppercase;
   margin-bottom: 100px; }
+
+.section-text__title, .section-text .title {
+  padding-bottom: 27px; }
+  .section-text__title span, .section-text .title span {
+    color: #ff1844;
+    letter-spacing: 0.3px; }
+
+.section-text__subtitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.18px; }

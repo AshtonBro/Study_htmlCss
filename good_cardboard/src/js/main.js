@@ -61,6 +61,22 @@ $(document).ready(function () {
     });
 });
 
+// * Swiper slider
+$('[data-fancybox="images"]').fancybox({
+    arrows: false,
+    touch: false,
+    transitionEffect: "none",
+    PLAY_START: false,
+    loop: false,
+    infobar: false,
+    dblclickContent: false,
+    dblclickSlide: false,
+    dblclickOutside: false,
+    buttons: [
+        "close"
+    ],
+});
+
 // * Work with the site on JavaScript
 const sliderImg = document.querySelectorAll('.main-slider-block__img'),
     overlay = document.querySelector('.overlay');
