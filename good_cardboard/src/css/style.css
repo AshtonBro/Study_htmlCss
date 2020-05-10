@@ -423,9 +423,10 @@ header {
 
 .section-text__title, .section-text .title {
   padding-bottom: 27px; }
-  .section-text__title span, .section-text .title span {
-    color: #ff1844;
-    letter-spacing: 0.3px; }
+
+.section-text__subspan {
+  color: #ff1844;
+  letter-spacing: 0.3px; }
 
 .section-text__subtitle {
   text-align: center;
@@ -609,9 +610,10 @@ header {
   line-height: 46px;
   padding-bottom: 0;
   margin-bottom: 45px; }
-  .section-text__title span {
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff; }
+
+.section-subtitle__span {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff; }
 
 .order-call {
   text-align: center; }
@@ -695,3 +697,48 @@ header {
     margin-bottom: 11px; }
   .contact-service__descr {
     margin-bottom: 12px; }
+
+.row {
+  padding-top: 48px;
+  padding-bottom: 44px; }
+
+.footer {
+  background-color: #ffffff; }
+
+.footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  padding: 0; }
+  .footer-logo__img {
+    background: url(../img/footer/Flowers_black.png) center no-repeat;
+    background-size: 100%;
+    width: 156px;
+    height: 40px;
+    margin-right: 42px; }
+  .footer-logo__desc {
+    color: #292929;
+    font-family: "Gotham Pro light";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.12px;
+    line-height: 1.3;
+    vertical-align: middle; }
+    .footer-logo__desc span {
+      color: #ff3469;
+      font-family: "Gotham Pro Medium";
+      font-weight: 500; }
+
+.footer-link {
+  text-align: right;
+  vertical-align: middle;
+  line-height: 45px; }
+  .footer-link__designer {
+    color: #101010;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12px;
+    text-align: right; }
+  .footer-link__name {
+    text-decoration: underline; }
