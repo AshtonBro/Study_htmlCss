@@ -202,7 +202,7 @@ header {
   .header-contacts::after {
     position: absolute;
     content: url(../img/header/lip.png);
-    margin-top: -17%;
+    margin-top: -22%;
     margin-left: -55%; }
   .header-contacts__phone {
     color: #ffffff;
@@ -421,20 +421,26 @@ header {
   text-transform: uppercase;
   margin-bottom: 100px; }
 
-.section-text__title, .section-text .title {
-  padding-bottom: 27px; }
-
-.section-text__subspan {
-  color: #ff1844;
-  letter-spacing: 0.3px; }
-
-.section-text__subtitle {
-  text-align: center;
+.products-text {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.18px;
-  padding-bottom: 77px; }
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.3px; }
+  .products-text__title {
+    text-transform: uppercase;
+    margin-top: 90px;
+    margin-bottom: 27px; }
+  .products-text__subspan {
+    color: #ff1844;
+    letter-spacing: 0.3px; }
+  .products-text__subtitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    margin-bottom: 77px; }
 
 .product-items {
   display: -webkit-box;
@@ -698,11 +704,9 @@ header {
   .contact-service__descr {
     margin-bottom: 12px; }
 
-.row {
-  padding-top: 48px;
-  padding-bottom: 44px; }
-
 .footer {
+  padding-top: 48px;
+  padding-bottom: 44px;
   background-color: #ffffff; }
 
 .footer-logo {
