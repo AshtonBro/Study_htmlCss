@@ -155,7 +155,12 @@ body {
     z-index: -1; }
 
 .is-open {
-  display: block; }
+  display: block;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear; }
+
+.is-close {
+  display: none; }
 
 header {
   padding-top: 54px;
@@ -228,7 +233,8 @@ header {
     border: none;
     border-bottom: 1px solid #ff3469; }
     .header-contacts__button:hover {
-      color: #ff1844; }
+      color: #ff1844;
+      border-bottom: 1px solid #ff1844; }
 
 .main {
   border-bottom: 1px solid #4c4c4c; }
@@ -353,7 +359,8 @@ header {
   border-bottom: 1px solid #f24841;
   font-size: 18px; }
   .reviews-slider__button:hover {
-    color: #ff1844; }
+    color: #ff1844;
+    border-bottom: 1px solid #ff1844; }
 
 .reviews-slider__img {
   position: relative; }
@@ -432,8 +439,11 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-preferred-size: 23%;
+  flex-basis: 23%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -545,6 +555,32 @@ header {
   .product-button:hover {
     background-color: #ff1844; }
 
+.product-openner {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  color: #f24841;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  line-height: 22px;
+  border: none;
+  border-bottom: 1px solid #f24841;
+  margin-bottom: 64px; }
+  .product-openner::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background-image: url(../img/products/fig-1.png);
+    z-index: 5;
+    margin-left: 51px;
+    margin-top: -14px; }
+  .product-openner:hover {
+    color: #ff1844;
+    border-bottom: 1px solid #ff1844; }
+
 .color-1 {
   background-color: #ffffff;
   margin-right: 4%; }
@@ -563,3 +599,29 @@ header {
 
 .color-5 {
   background-color: #12129d; }
+
+.order {
+  background-color: #1a1a1a; }
+
+.section-text__title {
+  line-height: 46px;
+  padding-bottom: 0;
+  margin-bottom: 61px; }
+  .section-text__title span {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff; }
+
+.order-call {
+  text-align: center; }
+  .order-call__text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    margin-bottom: 22px; }
+  .order-call__phone {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    padding-bottom: 64px; }

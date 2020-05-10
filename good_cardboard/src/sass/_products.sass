@@ -14,7 +14,8 @@
 
 .product-items 
     display: flex
-    flex-basis: 25%
+    justify-content: space-between
+    flex-basis: 23%
     flex-wrap: wrap
 .product
     &-item
@@ -86,7 +87,6 @@
             border: none
             &:hover
                 color: $btn-bg-color-active
-
     &-button
         color: $text-color
         font-size: 14px
@@ -100,6 +100,31 @@
         margin-bottom: 30px
         &:hover
             background-color: $btn-bg-color-active
+    &-openner
+        display: block
+        margin-right: auto
+        margin-left: auto
+        background-color: transparent
+        color: $btn-bg-color-rew
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 0.16px
+        line-height: 22px
+        border: none
+        border-bottom: 1px solid $btn-bg-color-rew
+        margin-bottom: 64px
+        &::after
+            content: ''
+            position: absolute
+            width: 10px
+            height: 4px
+            background-image: url(../img/products/fig-1.png)
+            z-index: 5
+            margin-left: 51px
+            margin-top: -14px
+        &:hover
+            color: $btn-bg-color-active
+            border-bottom: 1px solid $btn-bg-color-active
 
 .color-1
     background-color: #ffffff
