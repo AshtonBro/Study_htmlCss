@@ -10,8 +10,7 @@ $(document).ready(function () {
     nextArrow: '<div class="slider-arrow slider-arrow_right"></div>',
     autoplay: false,
     autoplaySpeed: 2000,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1200,
         settings: {
           centerPadding: "60px",
@@ -58,10 +57,8 @@ $(document).ready(function () {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow:
-      '<div class="slider-arrow-reviews slider-arrow-reviews_left"></div>',
-    nextArrow:
-      '<div class="slider-arrow-reviews slider-arrow-reviews_right"></div>',
+    prevArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_left"></div>',
+    nextArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_right"></div>',
   });
 });
 
@@ -90,7 +87,7 @@ const toggleFunc = () => {
   overlay.classList.toggle("is-open");
 };
 
-// * Hidden items witch lower 8
+// * Hidden the all items witch index nubmer is lower then 8
 const hiddenItems = () => {
   for (let i = 8; i < productItem.length; i++) {
     productItem[i].classList.add("is-close");

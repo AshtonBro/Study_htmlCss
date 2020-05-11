@@ -162,6 +162,10 @@ body {
 .is-close {
   display: none; }
 
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
 header {
   padding-top: 54px;
   margin-bottom: 122px; }
@@ -687,8 +691,6 @@ header {
 
 .payment-social__image {
   cursor: pointer; }
-  .payment-social__image:hover {
-    background-color: #4680C2; }
 
 .contact-service {
   text-align: right;
@@ -697,10 +699,11 @@ header {
   font-weight: 400;
   letter-spacing: 0.14px; }
   .contact-service__phone {
+    color: #ffffff;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.24px;
-    margin-bottom: 11px; }
+    padding-bottom: 11px; }
   .contact-service__descr {
     margin-bottom: 12px; }
 
