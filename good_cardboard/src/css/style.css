@@ -306,9 +306,7 @@ body {
     z-index: -1; }
 
 .is-open {
-  display: block;
-  -webkit-transition: all 2s linear;
-  transition: all 2s linear; }
+  display: block; }
 
 .is-close {
   display: none; }
@@ -318,7 +316,18 @@ a {
   color: #ffffff; }
 
 .button-order {
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
+  .button-order:hover {
+    color: #ff1844;
+    border-bottom: 1px solid #ff1844; }
+
+.phone-text {
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
+  .phone-text:hover {
+    color: #ff1844; }
 
 header {
   padding-top: 54px;
@@ -450,8 +459,8 @@ header {
     border: 3px solid #ff2e55;
     background-color: #ff2e55;
     margin-bottom: 77px;
-    -webkit-transition: 1s linear;
-    transition: 1s linear; }
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear; }
     .main-order__button:hover {
       background-color: #ff1844; }
 
@@ -515,7 +524,9 @@ header {
   line-height: 22px;
   border: none;
   border-bottom: 1px solid #f24841;
-  font-size: 18px; }
+  font-size: 18px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
   .reviews-slider__button:hover {
     color: #ff1844;
     border-bottom: 1px solid #ff1844; }
@@ -703,7 +714,9 @@ header {
   font-weight: 500;
   line-height: 22px;
   color: #ffffff;
-  border: none; }
+  border: none;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
   .product-count__button:hover {
     color: #ff1844; }
 
@@ -717,7 +730,9 @@ header {
   height: 40px;
   background-color: #f24841;
   border: none;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
   .product-button:hover {
     background-color: #ff1844; }
 
@@ -734,7 +749,9 @@ header {
   line-height: 22px;
   border: none;
   border-bottom: 1px solid #f24841;
-  margin-bottom: 64px; }
+  margin-bottom: 64px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear; }
   .product-openner::after {
     content: '';
     position: absolute;

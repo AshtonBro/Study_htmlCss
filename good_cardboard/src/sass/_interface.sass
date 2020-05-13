@@ -72,7 +72,6 @@
 
 .is-open
     display: block
-    transition: all 2s linear
 
 .is-close
     display: none
@@ -83,3 +82,12 @@ a
 
 .button-order
     cursor: pointer
+    transition: 0.5s linear
+    &:hover
+        color: $btn-bg-color-active
+        border-bottom: 1px solid $btn-bg-color-active
+
+.phone-text
+    transition: 0.5s linear
+    &:hover
+        color: $btn-bg-color-active
