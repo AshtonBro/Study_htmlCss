@@ -126,24 +126,24 @@
   <!--? Modal sent email and phone-->
   <div class="modal-window">
     <div class="modal-dialog modal-dialog-window">
-      <button class="close-auth">&times;</button>
+      <div class="close-auth">&times;</div>
       <form id="sentEmail">
         <fieldset class="modal-body">
           <legend class="modal-title">Получите индивидуальное предложение</legend>
           <div class="modal-subtitle">Заполните форму обратной связи:</div>
           <label class="label-auth">
             <span>Телефон</span>
-            <input id="sentEmail" type="tel" placeholder="Введите номер телефона" />
+            <input class="label-auth__input" id="sentEmail" type="tel" placeholder="Введите номер телефона" />
           </label>
           <label class="label-auth">
             <span>Email</span>
-            <input id="sentEmail" type="email" placeholder="Введите email" />
+            <input class="label-auth__input" id="sentEmail" type="email" placeholder="Введите email" />
           </label>
         </fieldset>
         <!-- /.modal-body -->
         <div class="modal-footer">
           <div class="footer-buttons">
-            <button class="button button-primary button-login" type="submit">
+            <button class="button button-primary button-send" type="submit">
               Отправить
             </button>
           </div>
@@ -922,11 +922,11 @@
     <div class="container">
       <div class="section-text__title title">
         Остались вопросы?<br />
-        <span class="section-subtitle__span">Закажите звонок нашего ФЛОРИСТА!</span>
+        <span class="section-subtitle__span button-order">Закажите звонок нашего ФЛОРИСТА!</span>
       </div>
       <div class="order-call">
         <div class="order-call__text">или позвоните по телефону</div>
-        <div class="order-call__phone button-order"><a href="tel:8(800)654-87-45">8 (800) 654-87-45</a></div>
+        <div class="order-call__phone"><a href="tel:8(800)654-87-45">8 (800) 654-87-45</a></div>
       </div>
     </div>
   </div>
@@ -991,7 +991,7 @@
         <div class="footer-link col-6">
           <div class="footer-link__designer">
             Дизайн сайта:
-            <a href="https://vk.com/evgenysolovyev" target="_blank"><span class="footer-link__designer"> Evgenii
+            <a href="https://vk.com/evgenysolovyev" target="_blank"><span class="footer-link__designer name"> Evgenii
                 Solovev</span></a>
           </div>
         </div>
