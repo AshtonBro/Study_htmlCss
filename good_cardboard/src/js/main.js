@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // * Slider Slick jQuery path of code
 $(document).ready(function () {
@@ -10,8 +10,8 @@ $(document).ready(function () {
     nextArrow: "<div class='slider-arrow slider-arrow_right'></div>",
     autoplay: false,
     autoplaySpeed: 2000,
-    responsive: [
-      {
+    infinite: false,
+    responsive: [{
         breakpoint: 1200,
         settings: {
           centerPadding: "60px",
@@ -58,10 +58,8 @@ $(document).ready(function () {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow:
-      '<div class="slider-arrow-reviews slider-arrow-reviews_left"></div>',
-    nextArrow:
-      '<div class="slider-arrow-reviews slider-arrow-reviews_right"></div>',
+    prevArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_left"></div>',
+    nextArrow: '<div class="slider-arrow-reviews slider-arrow-reviews_right"></div>',
   });
 });
 
@@ -76,26 +74,60 @@ $('[data-fancybox="images"]').fancybox({
   dblclickContent: false,
   dblclickSlide: false,
   dblclickOutside: false,
-  buttons: ["close"],
+  buttons: ["close"]
 });
 
 // * Work with the site on JavaScript
 const sliderImg = document.querySelectorAll(".main-slider-block__img"),
-  overlay = document.querySelector(".overlay"),
   productItem = document.querySelectorAll(".product-item"),
   productOpenner = document.querySelector(".product-openner"),
   modalWindow = document.querySelector(".modal-window"),
   buttonOrder = document.querySelectorAll(".button-order"),
-  closeAuth = document.querySelector(".close-auth");
+  closeAuth = document.querySelector(".close-auth"),
+  popup = document.querySelectorAll('.popup'),
+  popupWindow = document.querySelector('.popup-window');
 
-// * Toggle function for add/remove class
-const toggleFunc = () => {
-  overlay.classList.toggle("is-open");
+// * asynchronous function, server request and work with JSON bd
+const getData = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(
+      `Ошибка по адресу ${url}, статус ошибки ${response.status}!`
+    );
+  }
+  return await response.json();
 };
 
 // * Toggle function for add/remove class
-const toggleModal = () => {
-  modalWindow.classList.toggle("is-open");
+const togglePopup = (elem) => {
+  if (document.documentElement.clientWidth > 720) {
+    elem.style.display = 'block';
+    elem.style.transform = 'translateX(-100%)';
+    setTimeout(() => {
+      elem.style.transform = 'translateX(0%)';
+      elem.style.transition = '0.6s';
+    }, 500);
+  } else {
+    elem.style.display = 'block';
+  }
+
+  elem.addEventListener('click', (event) => {
+    let target = event.target;
+    if (document.documentElement.clientWidth > 720) {
+      if (target.classList.contains('close-cross')) {
+        elem.style.transform = 'translateX(-100%)';
+        elem.style.transition = '0.8s';
+      } else {
+        if (!target.closest('modal-window') || !target.closest('overlay')) {
+          elem.style.transform = 'translateX(-100%)';
+          elem.style.transition = '0.8s';
+        }
+      }
+    } else {
+      elem.style.display = 'none';
+    }
+  });
 };
 
 // * Hidden the all items witch index nubmer is lower then 8
@@ -112,111 +144,51 @@ const showItem = () => {
   }
 };
 
-// * local data base
-let obj = {
-  flower1: "Роза",
-  descr1: `Розы - это цветы не бывало популярны. На данный момент существует несколько тысяч сортов
-    роз. Розы это цветы, которые обладают волшебной красотой и притягательностью. Сложено много легенд о сказочной
-    розе. Ее любят все, ну и даже преклоняются пред ней. Все народы мира чествуют это прекрасное растение.`,
-
-  flower2: "Лилия",
-  descr2: `Цветок Лилия происхождением из Рима и Египта. Эти цветы были почитаемы еще в Древней Греции. Изначально они имели исключительно белую окраску, благодаря которой стали символизировать чистоту и нежность.`,
-
-  flower3: "Георгин",
-  descr3: `Племена майя использовали георгины для проведения своих ритуалов. Так называемые «храмы солнца» просто утопали в этих ярких цветах. В древности люди считали георгины посланниками Солнца, им поклонялись и почитали их. `,
-
-  flower4: "Сирень",
-  descr4: `Какая девушка не мечтает о том, чтобы ей весной подарили охапку сирени? Красивая, ароматная и невероятно романтичная сирень радует своим цветением. Многие знают о примете – если найти и съесть цветок сирени, на котором пять лепестков и загадать желание – оно непременно исполнится.`,
-
-  flower5: "Гербера",
-  descr5: `У каждого вида своя удивительная история путешествия, свои предпочтения и особенности. Среди таких «пришельцев-путешественников» можно встретить удивительную и многоликую герберу. Она символизирует силу и радость жизни, поэтому ее часто дарят на праздники.`,
-
-  flower6: "Азалия",
-  descr6: `Азалия — одно из самых красивых горшечных растений, цветущих в зимнее время. Крупных ярких цветков обычно бывает так много, что за ними практически теряется сам небольшой кустик с глянцевыми темно-зелеными листьями.`,
-
-  flower7: "Гербера фиолетовая",
-  descr7: `Согласно древним преданиям, георгин считался царским цветком, его выращивали только на территории княжеских садов.`,
-};
-
-let flower = "";
-let descr = "";
-
 // * Creating a modal window with a description of the flower
-const createCardFlower = () => {
+const createCardFlower = ({
+  id,
+  title,
+  description
+}) => {
   const card = document.createElement("div");
   card.insertAdjacentHTML(
     "beforeend",
     `
-        <div class="popup">
-            <div class="popup-title">${flower}</div>
-            <div class="popup-close">&times;</div>
-            <div class="popup-descr">${descr}
-            </div>
-        </div>
+    <div class="overlay" data-index="${id}">
+      <div class="popup">
+        <div class="popup-title">${title}</div>
+        <div class="popup-close close-cross">&times;</div>
+        <div class="popup-descr">${description}</div>
+      </div>
+    </div>
     `
   );
 
-  overlay.insertAdjacentElement("beforeend", card);
+  popupWindow.insertAdjacentElement("beforeend", card);
 };
 
 // * Find the flower by target and assign parameters to it
 const findFlower = () => {
   const targer = event.target;
-  console.log("targer: ", targer.alt);
-  if (targer.alt == "flower-1") {
-    flower = obj.flower1;
-    descr = obj.descr1;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-2") {
-    flower = obj.flower2;
-    descr = obj.descr2;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-3") {
-    flower = obj.flower3;
-    descr = obj.descr3;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-4") {
-    flower = obj.flower4;
-    descr = obj.descr4;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-5") {
-    flower = obj.flower5;
-    descr = obj.descr5;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-6") {
-    flower = obj.flower6;
-    descr = obj.descr6;
-    createCardFlower();
-  }
-  if (targer.alt == "flower-7") {
-    flower = obj.flower7;
-    descr = obj.descr7;
-    createCardFlower();
-  }
+  const overlay = document.querySelectorAll(".overlay");
+  overlay.forEach((elem) => {
+    if (elem.dataset.index == targer.alt) {
+      togglePopup(overlay[targer.alt - 1]);
+    }
+  });
 };
 
 // * Event listeners
+const activateToggle = () => togglePopup(modalWindow);
+buttonOrder.forEach(elem => elem.addEventListener('click', activateToggle));
 productOpenner.addEventListener("click", showItem);
-closeAuth.addEventListener("click", toggleModal);
+
 sliderImg.forEach((elem) => {
   elem.addEventListener("click", findFlower);
-  elem.addEventListener("click", toggleFunc);
-});
-overlay.addEventListener("click", () => {
-  const targer = event.target;
-  if (targer.closest(".popup-close")) {
-    toggleFunc();
-    document.querySelector(".popup").remove();
-  }
-});
-buttonOrder.forEach((elem) => {
-  elem.addEventListener("click", toggleModal);
 });
 
 // * Init functions
 hiddenItems();
+getData('db/clients-review.json').then((data) => {
+  data.forEach(createCardFlower);
+});
