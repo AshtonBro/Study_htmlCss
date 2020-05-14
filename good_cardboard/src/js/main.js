@@ -114,12 +114,13 @@ const togglePopup = (elem) => {
 
   elem.addEventListener('click', (event) => {
     let target = event.target;
+    console.log('target: ', target);
     if (document.documentElement.clientWidth > 720) {
       if (target.classList.contains('close-cross')) {
         elem.style.transform = 'translateX(-100%)';
         elem.style.transition = '0.8s';
       } else {
-        if (!target.closest('modal-window') || !target.closest('overlay')) {
+        if (!target.closest('.modal-dialog-window') && !target.closest('.popup')) {
           elem.style.transform = 'translateX(-100%)';
           elem.style.transition = '0.8s';
         }
@@ -130,17 +131,10 @@ const togglePopup = (elem) => {
   });
 };
 
-// * Hidden the all items witch index nubmer is lower then 8
-const hiddenItems = () => {
-  for (let i = 8; i < productItem.length; i++) {
-    productItem[i].classList.add("is-close");
-  }
-};
-
 // * Toggle function for special element
 const showItem = () => {
   for (let i = 8; i < productItem.length; i++) {
-    productItem[i].classList.toggle("is-close");
+    productItem[i].toggleAttribute('hidden');
   }
 };
 
@@ -182,13 +176,10 @@ const findFlower = () => {
 const activateToggle = () => togglePopup(modalWindow);
 buttonOrder.forEach(elem => elem.addEventListener('click', activateToggle));
 productOpenner.addEventListener("click", showItem);
-
-sliderImg.forEach((elem) => {
-  elem.addEventListener("click", findFlower);
-});
+sliderImg.forEach(elem => elem.addEventListener("click", findFlower));
 
 // * Init functions
-hiddenItems();
+showItem();
 getData('db/clients-review.json').then((data) => {
   data.forEach(createCardFlower);
 });
