@@ -2,17 +2,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.container {
+  max-width: 960px; }
+
 body {
   background-color: #292929;
   font-family: 'Gotham Pro'; }
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px; } }
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px; } }
 
 .overlay {
   position: fixed;
@@ -243,7 +238,7 @@ body {
     position: absolute;
     width: 8px;
     height: 8px;
-    margin-left: 78px;
+    margin-left: 75px;
     margin-top: 58px;
     -webkit-box-shadow: 0 0 35px 10px #ffffff;
     box-shadow: 0 0 35px 10px #ffffff;
@@ -365,7 +360,7 @@ header {
   .header-contacts::after {
     position: absolute;
     content: url(../img/header/lip.png);
-    margin-top: -22%;
+    margin-top: -18%;
     margin-left: -55%; }
   .header-contacts__phone {
     color: #ffffff;
@@ -383,8 +378,8 @@ header {
       position: absolute;
       content: url(../img/main/lip-3.png);
       margin-top: 330px;
-      margin-left: 80px;
-      z-index: -1; }
+      margin-left: 40px;
+      z-index: 2; }
   .header-contacts__button {
     background-color: transparent;
     color: #ff3469;
@@ -921,3 +916,18 @@ header {
 
 .name {
   text-decoration: underline; }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px; }
+  .main-slider-block::before {
+    margin-left: 88px; }
+  .modal-dialog {
+    max-width: 740px;
+    max-height: 430px; }
+  .label-auth {
+    margin: 23px; } }
+
+@media (min-width: 767.98px) and (max-width: 992px) {
+  .container {
+    max-width: 810px; } }
